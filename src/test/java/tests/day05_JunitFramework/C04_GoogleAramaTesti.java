@@ -43,7 +43,7 @@ public class C04_GoogleAramaTesti {
 
         //6- Bulunan sonuc sayisini yazdirin
         WebElement sonucTexti= driver.findElement(By.id("result-stats"));
-       String sonucTextiStr=sonucTexti.getText();
+        String sonucTextiStr=sonucTexti.getText();
         System.out.println("Bulunan sonuc yazisi: "+sonucTextiStr);
 
         //7- sonuc sayisinin 10 milyon’dan fazla oldugunu test edin
@@ -52,7 +52,7 @@ public class C04_GoogleAramaTesti {
 
         String sonucSayisiStr=sonucYazisiArr[1];
 
-        sonucSayisiStr=sonucSayisiStr.replaceAll("\\D","");//188 000 000 arasindaki bosluklardan kurtulmak icin
+        sonucSayisiStr=sonucSayisiStr.replaceAll("\\D","");//188000000 arasindaki bosluklardan kurtulmak icin
 
         int sonucSayisiInt=Integer.parseInt(sonucSayisiStr);
 
