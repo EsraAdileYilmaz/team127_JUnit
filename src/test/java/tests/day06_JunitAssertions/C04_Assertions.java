@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import tests.utilities.ReusableMethods;
 
 import java.time.Duration;
 
@@ -64,6 +65,7 @@ public class C04_Assertions {
 
         // logoTest => BestBuy logosunun görüntülendigini test edin
         WebElement logoElementi= driver.findElement(By.xpath("(//img[@class='logo'])[1]"));
+        ReusableMethods.bekle(1);
         Assert.assertTrue(logoElementi.isDisplayed());
     }
 
