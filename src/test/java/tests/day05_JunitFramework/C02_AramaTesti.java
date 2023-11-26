@@ -38,11 +38,10 @@ public class C02_AramaTesti {
         //3- “phone” ile arama yapalim
         aramaKutusu.sendKeys("phone"+ Keys.ENTER);
 
-        WebElement sonucSayisiElementi= driver.findElement(By.className("product-count-text"));
-        System.out.println(sonucSayisiElementi.getText());
-
 
         //4- Bulunan sonuc sayisini yazdiralim
+        WebElement sonucSayisiElementi= driver.findElement(By.className("product-count-text"));
+        System.out.println(sonucSayisiElementi.getText());//4 Products Found
         String sonucSayisiStr=sonucSayisiElementi.getText().replaceAll("\\D","");//"4"
         int sonucSayisi=Integer.parseInt(sonucSayisiStr);//4
 
@@ -52,8 +51,7 @@ public class C02_AramaTesti {
 
         //6- Urunun stokta var oldugunu test edin
         WebElement urunStokElementi=driver.findElement(By.xpath("(//span[@class='heading-xs '])[1]"));
-        System.out.println(urunStokElementi.getText());
-
+        System.out.println(urunStokElementi.getText());//Availibility: In Stock
         String expectedStokDurumu="Availibility: In Stock";
         String actualStokDurumu=urunStokElementi.getText();
 

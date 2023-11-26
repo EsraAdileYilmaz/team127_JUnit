@@ -35,14 +35,14 @@ public class C03_WebappTesti {
 
         //5. Sign in buttonuna tiklayin
         driver.findElement(By.xpath("//*[@*='btn btn-primary']")).click();
-        // driver.findElement(By.xpath("//*[@*='Sign in']")).click(); 2.locate
+        // driver.findElement(By.xpath("//*[@*='Sign in']")).click(); 2.locate yolu
 
         //6. Back tusu ile sayfaya donun
         driver.navigate().back();
 
         //7. Online Banking menusunden Pay Bills sayfasina gidin
-        driver.findElement(By.id("onlineBankingMenu")).click();
-        driver.findElement(By.id("pay_bills_link")).click();
+        driver.findElement(By.id("onlineBankingMenu")).click();//Online Banking menusune gidildi
+        driver.findElement(By.id("pay_bills_link")).click();//Pay Bills e gidildi
 
         //8. amount kismina yatirmak istediginiz herhangi bir miktari yazin
         WebElement amountBox=driver.findElement(By.id("sp_amount"));

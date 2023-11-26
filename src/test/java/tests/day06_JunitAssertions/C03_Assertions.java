@@ -19,9 +19,8 @@ public class C03_Assertions {
        iddia edilen ile sart uyusmuyorsa test FAILED olur.
         */
 
-       // emeklilik yasi 65 olsun
-
-       // 70 yasindaki bir kisinin emekli olabildigini test edin
+       // Emeklilik yasi 65 olsun
+       // 70 yasindaki bir kisinin emekli olabildigini test edin.
 
        int yas=70;
        Assert.assertTrue(yas >65);//test passed
@@ -33,17 +32,16 @@ public class C03_Assertions {
        int sayi2=30;
        //Assert.assertTrue(sayi1 > sayi2);//failed olur
        //dogru oldugunu iddia ediyorum(20 >30).
-       //parantez ici false ama bizim beklentimiz true oldugu icin test failed olur
+       //parantez ici false ama bizim iddiamiz true oldugu icin test failed olur
        //assertTrue(sart=false ) oldugu icin failed
 
-       Assert.assertFalse(sayi1>sayi2); // PASSED
+       Assert.assertFalse(sayi1>sayi2); // PASSED cunku iddiamiz false(sart false)
 
        System.out.println("assertion failed olursa bu satir calismaz");
 
-
        String actualUrl = "https://testotomasyonu.com/";
 
-       //  Url'in testotomasyonu icerdigini test edin
+       //  Url'in "testotomasyonu" icerdigini test edin
 
        Assert.assertTrue(actualUrl.contains("testotomasyonu")); // PASSED cunku url testotomasyonu kelimesini icerir
 

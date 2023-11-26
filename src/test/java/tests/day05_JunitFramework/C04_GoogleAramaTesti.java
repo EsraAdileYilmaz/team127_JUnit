@@ -52,7 +52,7 @@ public class C04_GoogleAramaTesti {
 
         String sonucSayisiStr=sonucYazisiArr[1];
 
-        sonucSayisiStr=sonucSayisiStr.replaceAll("\\D","");//188000000 arasindaki bosluklardan kurtulmak icin
+        sonucSayisiStr=sonucSayisiStr.replaceAll("\\D","");//"188000000" arasindaki bosluklardan kurtulmak icin
 
         int sonucSayisiInt=Integer.parseInt(sonucSayisiStr);
 

@@ -15,7 +15,7 @@ public class C05_TestNotasyonu {
 
 
     @Test
-    public void testOtomasyonuTest(){// test method'lari static olmamalidir
+    public void testOtomasyonuTest(){// test method'lari "static" olmamalidir
         WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
@@ -39,7 +39,7 @@ public class C05_TestNotasyonu {
     }
 
     @Test
-    public void wisequarterTest(){// test method'lari static olmamalidir
+    public void wisequarterTest(){// test method'lari "static" olmamalidir
         WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();

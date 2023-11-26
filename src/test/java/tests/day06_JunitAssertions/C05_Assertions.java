@@ -20,7 +20,7 @@ public class C05_Assertions {
         tumunu tek test method'unda yapmak
         bize is yuku acisindan daha pratik gelebilir
         AMMA
-        bir test method'unda birden faazla assertion oldugunda
+        bir test method'unda birden fazla assertion oldugunda
         - her bir assertion ayri ayri raporlanmamis olur
         - bir assertion failed oldugunda kod calismasi durur
           kalan assertion'larin sonucunu bilemeyiz
