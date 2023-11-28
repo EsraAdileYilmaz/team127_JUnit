@@ -37,8 +37,9 @@ public class ReusableMethods {
             String eachTitle=driver.switchTo().window(each).getTitle();
             //driver'imiz each'in getirdigi herbir yeni window'a sirasiyla gecip oranin title'ini getirecek.bizde bunu String bir variable'a atayacagiz.
 
-            if(eachTitle.equals(hedefSayfaTitle)){//each'in getirdigi title'lardan biri
-                                                  //bizim hedef title'imiza esit oldugunda driver direk o window'a gececek.
+            if(eachTitle.equals(hedefSayfaTitle)){//each'in getirdigi title,
+                                                  //bizim hedef title'imiza esit oldugunda
+                                                  // driver direk o window'a gececek.
                 return driver;
             }
         }

@@ -21,7 +21,7 @@ public class C04_Actions extends TestBase {
         Actions actions=new Actions(driver);
         WebElement ciziliAlanElementi=driver.findElement(By.id("hot-spot"));
         actions.contextClick(ciziliAlanElementi).perform();
-        //contextClick(ciziliAlanElementi) parantez icine yazilan yere gidip click() yap demis oluyoruz
+        //contextClick(ciziliAlanElementi) parantez icine yazilan(ciziliAlanElementi) yere gidip click() yap demis oluyoruz
         ReusableMethods.bekle(2);
 
         //4- Alert’te cikan yazinin “You selected a context menu” oldugunu test edin.
@@ -38,7 +38,7 @@ public class C04_Actions extends TestBase {
         //7- Acilan sayfada h1 taginda “Make sure your code lands” yazdigini test edelim
         //burada yeni bir tab acildigi icin driver'i oraya gondermemiz gerekir.
         //bunuda yeni olusturdugumuz titleIleSayfaDegistir() methodu ile yapacagiz.
-        //bu method bize return driver; yaptigi icin bizim driver'imiza atamamiz gerekir.
+        //bu method bize return driver; dondurdugu icin bizim driver'imiza atamamiz gerekir.
         ReusableMethods.bekle(2);
         driver=ReusableMethods.titleIleSayfaDegistir(driver,"Elemental Selenium | Elemental Selenium");
         //acilan yeni sayfanin title'ini elde etmek icin sayfanin herhangi bir yerine inspecter yapilarak

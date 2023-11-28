@@ -17,7 +17,7 @@ public class C05_DragAndDrop extends TestBase {
         driver.get("https://testotomasyonu.com/droppable");
 
         //2- Accept bolumunde “Acceptable” butonunu tutup “Drop here” kutusunun ustune birakalim
-        //once tasinacak element locate edilmeli,sonra tasinacak yer locate edilmelidir.
+        //once tasinacak element locate edilmeli,sonra tasinacak-hedef yer locate edilmelidir.
         WebElement acceptableElementi= driver.findElement(By.id("draggable2"));
         WebElement tasinacakHedefAlan= driver.findElement(By.id("droppable2"));
 
@@ -32,7 +32,7 @@ public class C05_DragAndDrop extends TestBase {
 
         //4- Sayfayi yenileyin
         driver.navigate().refresh();
-        //sayfayi yeniledigimizde StaleElementException verebilir.bu durumda kodlarimizida yenilemek
+        //sayfayi yeniledigimizde StaleElementReferenceException verebilir.bu durumda kodlarimizida yenilemek
         //adina kullandigimiz kodlari copier-coller yapmaliyiz.
 
         //5- “Not Acceptable” butonunu tutup “Drop Here” kutusunun ustune birakalim

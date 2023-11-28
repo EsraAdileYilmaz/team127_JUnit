@@ -23,9 +23,9 @@ public class C07_KeyboardActions extends TestBase {
         ReusableMethods.bekle(2);
         Actions actions=new Actions(driver);
          actions.click(searchBox)
-                .keyDown(Keys.SHIFT)
+                .keyDown(Keys.SHIFT)//SHIFT'e basili tut
                 .sendKeys("dell c")
-                .keyUp(Keys.SHIFT)
+                .keyUp(Keys.SHIFT)//SHIFT'i birak
                 .sendKeys("ore ")
                 .keyDown(Keys.SHIFT)
                 .sendKeys("i")
