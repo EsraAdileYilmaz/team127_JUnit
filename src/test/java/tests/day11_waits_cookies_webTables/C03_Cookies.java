@@ -74,7 +74,7 @@ public class C03_Cookies extends TestBase {
         cookieSeti=driver.manage().getCookies();//eger Set<>'in ici bossa silinmistir.
         Assert.assertTrue(cookieSeti.size() == 0);
 
-        //a
+
 
 
 
