@@ -3,6 +3,7 @@ package tests.day10_actions_faker_fileTestleri;
 import com.github.javafaker.Faker;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -19,6 +20,7 @@ public class C01_FacebookKullaniciOlusturma extends TestBase {
 
         //2- Cookies kabul edin
         driver.findElement(By.xpath("//button[@title='Autoriser tous les cookies']")).click();
+
 
         //3- Yeni hesap olustur butonuna basalim
         driver.findElement(By.xpath("//*[@*='open-registration-form-button']")).click();

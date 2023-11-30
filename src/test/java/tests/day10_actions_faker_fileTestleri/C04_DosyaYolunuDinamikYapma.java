@@ -35,10 +35,10 @@ public class C04_DosyaYolunuDinamikYapma {
             Java dosya yolunu dinamik hale getirebilmemiz icin
             bize iki temel konuma ulasmak icin hazir method sunmus
 
-            1-  calistigimiz projenin dosya yoluna ulasmak isterseniz
+            1-  calistigimiz projenin dosya yoluna ulasmak isterseniz;
                 System.getProperty("user.dir")
 
-            2- bilgisayarin ana dosya yoluna ulasmak isterseniz
+            2- bilgisayarin ana dosya yoluna ulasmak isterseniz;
                System.getProperty("user.home")
 
                Eger bir takim halinde calisiyorsak;
