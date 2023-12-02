@@ -29,7 +29,7 @@ public class C03_FilesExistsTesti extends TestBase {
 
         ReusableMethods.bekle(2);
         //bu kodla sunu demis oluyoruz.dosyaYolu'nu sana verdigim dosya bilgisayarda varmi?
-        //bu kod sonucu boolean dondurur.varsa true,yoksa false dondurur
+        //bu kod sonucu boolean dondurur.Dosya varsa true,yoksa false dondurur
         System.out.println(Files.exists(Paths.get(dosyaYolu)));//bizde true yada false verir
         Assert.assertTrue( Files.exists(Paths.get(dosyaYolu)));//buradda testimizi yapiyoruz.
 
@@ -42,7 +42,7 @@ public class C03_FilesExistsTesti extends TestBase {
         dosyaYolu="/Users/familleyilmaz/Downloads/spectrum-logo.png";
         ReusableMethods.bekle(2);
         System.out.println(Files.exists(Paths.get(dosyaYolu)));//true
-        Assert.assertTrue( Files.exists(Paths.get(dosyaYolu)));//buradda testimizi yapiyoruz.
+        Assert.assertTrue( Files.exists(Paths.get(dosyaYolu)));//burada testimizi yapiyoruz.
 
 
 

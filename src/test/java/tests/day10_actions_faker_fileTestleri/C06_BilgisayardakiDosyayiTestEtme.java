@@ -13,7 +13,7 @@ public class C06_BilgisayardakiDosyayiTestEtme {
 
         // Downloads'da logo.png oldugunu test edin
         String dosyaYolu="/Users/familleyilmaz/Downloads/logo.png";//bu kod dinamik deildir
-        //dosya yolunu "Lire les informations" kismina basilinca cikan ekrandali Emplacement kismindan aliyoruz
+        //dosya yolunu==> "Lire les informations" kismina basilinca cikan ekrandali Emplacement kismindan aliyoruz
 
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));
 

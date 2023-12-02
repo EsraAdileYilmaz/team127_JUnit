@@ -26,7 +26,7 @@ public class C04_DosyaYolunuDinamikYapma {
         System.out.println(System.getProperty("user.dir"));//   /Users/familleyilmaz/IdeaProjects/com.team127_Junit
         //calistigimiz projenin dosyayolunu verdi
         System.out.println(System.getProperty("user.home"));//  /Users/familleyilmaz
-        //
+
 
 
         {

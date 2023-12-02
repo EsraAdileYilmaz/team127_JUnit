@@ -22,6 +22,7 @@ public class C05_ProjeIcindekiDosyaTesti {
 
         /*
 
+        "/Users/familleyilmaz/IdeaProjects/com.team127_Junit/src/test/java/tests/day10_actions_faker_fileTestleri/deneme.txt";
 
         ** Herkeste farkli olan kisim ==> user.dir
                  /Users/ahmetbulutluoz/Desktop/My Desktop/course/projeler/com.team127_JUnit
