@@ -20,15 +20,15 @@ public class C07_DosyaYukleme extends TestBase {
 
             Dosya yuklemede ise, dosya sec butonuna bastigimizda,
             bilgisayarimizdaki dosya yapisi acilir.
-            Biz webdriver ile bilgisayarimizdaki dosya yapisinda islem yapamayacagimiz icin
-            chooseFile butonuna sendKeys() ile dosya yolunu yollariz.
+            Biz webdriver ile bilgisayarimizdaki dosya yapisinda islem yapamayacagimiz icin,
+            chooseFile(choisir un fichier) butonuna sendKeys() ile dosya yolunu yollariz.
 
          */
 
         //1)https://the-internet.herokuapp.com/upload adresine gidelim
         driver.get("https://the-internet.herokuapp.com/upload");
 
-        // 2)chooseFile butonuna basalim
+        // 2)chooseFile(choisir un fichier) butonuna basalim
         //Yuklemek istediginiz dosyayi secelim.
         WebElement chooseFileButonu =driver.findElement(By.id("file-upload"));
 

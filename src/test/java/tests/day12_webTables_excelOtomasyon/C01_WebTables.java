@@ -69,7 +69,7 @@ public class C01_WebTables extends TestBase {
          */
         /*
            oncelikle furniture'i elde edicez sonra furniture'in fiyatini elde edicez.
-           yani 2.satirin 3. datasini ulasmamiz lazim.
+           yani category'den price'a ulasmamiz lazim.
          */
         String satirdakiKategoriXpath ="";
         String satirdakiFiyatXpath = "";

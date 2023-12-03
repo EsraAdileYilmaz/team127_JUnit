@@ -79,7 +79,7 @@ public class C01_ExplicitlyWait {
 
          /*
             Eger kullanmak istedigimiz element locate edilebilir durumda ise yani gorunur durumda ise;
-            once locate edip
+            once locate edip,
             sonra istenen condition(ExpectedConditions) icin bekleyebiliriz.
             Ama bu soruda oldugu gibi element gorunmuyorsa ve buyuzden
             locate ve bekleme kisir dongu olusturuyorsa;
@@ -89,7 +89,7 @@ public class C01_ExplicitlyWait {
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
                2.adim : bekleyecegimiz webelement'i locate edin
         WebElement itsGoneyaziElementi = driver.findElement(By.xpath("//*[text()=\"It's gone!\"]"));
-        NoSuchElementException verdi cunku elementi bulamadi.element gorunur durumda deil.
+        NoSuchElementException verdi, elementi bulamadi cunku element gorunur durumda deil.
                3.adim : wait objesini kullanarak istediginiz webelement uzerinde islem yapin
         wait.until(ExpectedConditions.visibilityOf(itsGoneyaziElementi));
              */

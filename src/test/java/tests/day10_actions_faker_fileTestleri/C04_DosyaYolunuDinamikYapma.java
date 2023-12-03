@@ -11,30 +11,6 @@ public class C04_DosyaYolunuDinamikYapma {
             Java dosya yolunu dinamik hale getirebilmemiz icin
             bize iki temel konuma ulasmak icin hazir method sunmus
 
-            1-  calistigimiz projenin dosya yoluna ulasmak isterseniz
-                System.getProperty("user.dir")
-
-            2- bilgisayarin ana dosya yoluna ulasmak isterseniz
-               System.getProperty("user.home")
-
-               Eger bir takim halinde calisiyorsak
-               projemizdeki bir dosya
-               veya downloads'a indirdigimiz bir dosyanin varligini test etmek istiyorsak
-               dosya yolunu bu iki kodu kullanarak dinamik hale getirmeliyiz
-         */
-
-        System.out.println(System.getProperty("user.dir"));//   /Users/familleyilmaz/IdeaProjects/com.team127_Junit
-        //calistigimiz projenin dosyayolunu verdi
-        System.out.println(System.getProperty("user.home"));//  /Users/familleyilmaz
-
-
-
-        {
-
-        /*
-            Java dosya yolunu dinamik hale getirebilmemiz icin
-            bize iki temel konuma ulasmak icin hazir method sunmus
-
             1-  calistigimiz projenin dosya yoluna ulasmak isterseniz;
                 System.getProperty("user.dir")
 
@@ -52,7 +28,7 @@ public class C04_DosyaYolunuDinamikYapma {
             //projemiz icindeki bir dosyanin varligini test etmek icin bu kod kullanilir.
             System.out.println(System.getProperty("user.home"));//  /Users/familleyilmaz
             //Bilgisayarin ana dosya yolunu verdi.Ana dosyanin halini verdi.
-            //projemizin disinda ama bilgisayarin icindeki bir dosyayi test etmek istiyorsak bu kod kullanilir.
+            //projemizin disinda amma bilgisayarin icindeki bir dosyayi test etmek istiyorsak bu kod kullanilir.
 
             /*
             ("user.dir")==>burasi herkeste farkli olabilir
@@ -68,4 +44,4 @@ public class C04_DosyaYolunuDinamikYapma {
 
 
     }
-}
+

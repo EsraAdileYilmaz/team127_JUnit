@@ -40,7 +40,7 @@ public class C04_WebTables extends TestBase {
 
         //4.Web table’daki satir sayisinin 5 oldugunu test edin
          List<WebElement> satirElementleriListesi =driver.findElements(By.xpath("//table/tbody/tr"));
-         //burada tum satirlari elde ederiz ve bunlar WebElement oldugu icin List<> icine atariz.
+         //bu locate'le tum satirlari elde ederiz ve bunlar WebElement oldugu icin List<> icine atariz.
        int expectedSatirSayisi=5;
        int actualSatirSayisi=satirElementleriListesi.size();
        Assert.assertEquals(expectedSatirSayisi,actualSatirSayisi);
@@ -55,7 +55,7 @@ public class C04_WebTables extends TestBase {
         System.out.println(satirListesiStr);
 
         //2.YOL=veya satir webelementlerini bir for loop ile yazdirip, basina aciklama da ekleyebiliriz.
-        for (int i = 0; i <satirElementleriListesi.size() ; i++) { //List<WebElement> satirElementleriListesi.size()
+        for (int i = 0; i <satirElementleriListesi.size() ; i++) { //List<WebElement> satirElementleriListesi'nin size()
             System.out.println(i+1 +". satir : " +satirElementleriListesi.get(i).getText());
             //satirElementleriListesi'nin her bir elementinin textini getir
         }

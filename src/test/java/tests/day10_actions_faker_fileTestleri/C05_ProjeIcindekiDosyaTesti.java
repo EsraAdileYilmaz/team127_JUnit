@@ -18,6 +18,7 @@ public class C05_ProjeIcindekiDosyaTesti {
         String dosyaYolu="/Users/familleyilmaz/IdeaProjects/com.team127_Junit/src/test/java/tests/day10_actions_faker_fileTestleri/deneme.txt";
 
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));// bu sekilde testimizi yapiyoruz.
+        //dosya yolunun icindeki dosyanin var oldugunu iddia ediyorum
 
 
         /*
@@ -33,7 +34,7 @@ public class C05_ProjeIcindekiDosyaTesti {
 
 
         String dinamikDosyaYolu=System.getProperty("user.dir") +"/src/test/java/tests/day10_actions_faker_fileTestleri/deneme.txt";
-        //bu sekilde verilen bir dosya yolu ile projede calisan herkeste bu kod gecerli olur.
+        //bu sekilde verilen bir dosya yolu ile projede calisan herkeste bu kod gecerli olur.yani bu kod herkeste calisir
 
         Assert.assertTrue(Files.exists(Paths.get(dinamikDosyaYolu)));// bu sekilde testimizi yapiyoruz.
         //projede calisan herkes bu yolla testini yapabilir.
