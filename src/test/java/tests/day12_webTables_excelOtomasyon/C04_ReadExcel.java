@@ -19,11 +19,12 @@ public class C04_ReadExcel {
         String dosyaYolu="src/test/java/tests/day12_webTables_excelOtomasyon/ulkeler.xlsx";
         FileInputStream fileInputStream=new FileInputStream(dosyaYolu);//dosya okuma objesi
         Workbook workbook= WorkbookFactory.create(fileInputStream);//kopya excel
-        Sheet sayfa2=workbook.getSheet("Sayfa2");//sayfa objesi
+        Sheet sayfa2=workbook.getSheet("Sayfa2");//sayfa objesi olusturuldu ve getSheet("Sayfa2") ile calismak istedigimiz sayfayi belirledik
 
         // sayfada son kullanilan satirin 26.satir oldugunu test edin
         int expectedSatirSayisi=26;
-        int actualSatirSayisi=sayfa2.getLastRowNum()+1;
+        int actualSatirSayisi=sayfa2.getLastRowNum()+1;//indexi 0 dan basladigi icin +1 yaptik
+        //getLastRowNum() methodu kullanilan en son satir numarasini getirir.
         Assert.assertEquals(expectedSatirSayisi,actualSatirSayisi);
 
         // sayfada reel olarak yazi yazilan(fiziksel olarak kullanilan) satir sayisinin 13 oldugunu test edin

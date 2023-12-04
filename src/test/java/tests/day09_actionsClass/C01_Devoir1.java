@@ -41,7 +41,7 @@ public class C01_Devoir1 extends TestBase {
 
         //● Electronics sayfasinin acildigini test edin
         //yeni bir tab acildigi icin driver'i o tab'a gonderen bir method yapacagiz.
-        //Ancak bunun icin oncesinde manuel olarak o siteye gidip sitenin title'ini ( ctrl+F)"//title" locate'i ile
+        //Ancak bunun icin oncesinde manuel olarak o siteye gidip sitenin title'ini (ctrl+F)"//title" locate'i ile
         //locate etmeliyim ve hedefSayfaTitle'i kismina parametre olarak atamaliyim.
         driver= ReusableMethods.titleIleSayfaDegistir(driver,"Test Otomasyonu - Electronics");
 

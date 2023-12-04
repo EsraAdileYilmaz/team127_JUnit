@@ -12,7 +12,6 @@ import java.io.IOException;
 public class C03_ReadExcelTesti {
 
     Sheet sayfa1;
-
     @Test
     public void readExcelTesti() throws IOException {
 
@@ -20,7 +19,7 @@ public class C03_ReadExcelTesti {
         String dosyaYolu="src/test/java/tests/day12_webTables_excelOtomasyon/ulkeler.xlsx";
         FileInputStream fileInputStream=new FileInputStream(dosyaYolu);//dosya okuma objesi
         Workbook workbook= WorkbookFactory.create(fileInputStream);//kopya excel
-        sayfa1=workbook.getSheet("Sayfa1");
+        sayfa1=workbook.getSheet("Sayfa1");//hangi sayfadaki bilgileri kullanacaksak bire bir aynisini yaziyoruz "Sayfa1"
 
         //		- 1.satirdaki 2.hucreye gidelim ve yazdiralim
         System.out.println(sayfa1.getRow(0).getCell(1));//Başkent (İngilizce)
@@ -70,8 +69,6 @@ public class C03_ReadExcelTesti {
 
         System.out.println("Fiziki olarak kullanilan satir sayisi: "+sayfa1.getPhysicalNumberOfRows());//Fiziki olarak kullanilan satir sayisi: 191
 
-
-        //		- Ingilizce Ulke isimleri ve baskentleri bir map olarak kaydedelim
 
 
     }

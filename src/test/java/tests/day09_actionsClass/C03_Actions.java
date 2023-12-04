@@ -19,7 +19,7 @@ public class C03_Actions extends TestBase {
         //2- “DGI Drones” uzerinde sag click yapin
         Actions actions=new Actions(driver);//1.adim
         WebElement droneElementi= driver.findElement(By.id("pic2_thumb"));//2.adim
-        actions.contextClick(droneElementi).perform();//3.adimda WebElement'i verip onun uzerine click yaptiriyoruz.
+        actions.contextClick(droneElementi).perform();//3.adimda WebElement'i verip onun uzerine sag click yaptiriyoruz.
         ReusableMethods.bekle(2);
 
         //3- Alert’te cikan yazinin “Tebrikler!... Sağ click yaptınız.” oldugunu test edin.
