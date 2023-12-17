@@ -16,26 +16,25 @@ public class C02_ReadExcelOtomasyonu {
 
         /*
             Bilgisayarimizdaki fiziki bir dosyayi
-            kodlarimiza direk eklememiz mumkun degil.
-
-            Apache poi verdigimiz dosya yolundaki
+            kodlarimiza direk eklememiz mumkun degildir.
+            pom.xml'e yuklenen Apache poi'ler verdigimiz dosya yolundaki
             fiziki excel dosyasinda bulunan tum datalari
             fileInputStream objesi sayesinde okuyup
             o bilgileri kullanabileceginiz
-            EXCEL dosyasinin KOPYASINI olusturur.
+            EXCEL dosyasinin KOPYASINI (workbook'u) olusturur.
 
             Biz de bu kopya excel uzerinde istedigimiz islemleri yapabiliriz.
 
             ONEMLI NOT :
             bu test methodu icinde yaptigimiz tum islemler
             excel uzerinde degil,
-            olusturdugumuz Workbook objesinin bulundugu satirin (43.satirin)
+            olusturdugumuz Workbook objesinin bulundugu satirin (42.satirin)
             calistigi anda excel'de varolan bilgiler uzerindedir.
 
             satir ve sutun bilgileri index ile calisir
             yani 0'dan baslar.
 
-            Class icinde Workbook,Sheet,Row ve Cell objelerinin 1 kez olusturlmasi YETERLIDIR.
+            Class icinde Workbook,Sheet,Row ve Cell objelerinin 1 kez olusturulmasi YETERLIDIR.
          */
         String dosyaYolu="src/test/java/tests/day12_webTables_excelOtomasyon/ulkeler.xlsx";//indirilen excel dosyasinin dosya yolu.bu yol projedeki herkeste ayni olmalidir
         //"user.dir" den sonraki kismi verdi.

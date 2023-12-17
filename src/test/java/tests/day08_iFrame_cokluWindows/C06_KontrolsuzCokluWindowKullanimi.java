@@ -34,13 +34,13 @@ public class C06_KontrolsuzCokluWindowKullanimi extends TestBase {
         //ama buraya tiklayinca kontrolsuz olarak yeni bir tab'da acti.bunu da manuel olarak kontrol edince gorduk
 
         /*
-            Driver bir webelement'e click yapildiginda
+            Driver,bir webelement'e click yapildiginda
             ayni sayfada acilacagini varsayar.
 
             Eger tiklanan element yeni bir tab veya window aciyorsa
             bu durumda driver'i yeni acilan tab/window'a bizim gondermemiz gerekir.
 
-            bizim driver'i baska bir tab/window'a yollamak icin 2 yolumuz var
+            Bizim driver'i baska bir tab/window'a yollamak icin 2 yolumuz var
             1- ya kontrollu yeni bir tab/window acarak
             2- yada kontrolsuz acilan tab/window'un Window handle degerini kullanarak
                driver'i o tab'a gonderebiliriz.

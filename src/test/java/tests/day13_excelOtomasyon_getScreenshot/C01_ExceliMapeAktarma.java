@@ -22,8 +22,7 @@ public class C01_ExceliMapeAktarma {
         Workbook workbook= WorkbookFactory.create(fileInputStream);
         //okunan dosya icindeki bilgileri kaydetmek ve uzerinde islem yapmak icin workbook(kopya excell) objesi olusturuyoruz
 
-        // 1) Ulkeler excel'indeki Turkce ulke isimleri ve
-        // Turkce baskent isimlerini bir Map olarak kaydedin
+        // 1) Ulkeler excel'indeki Turkce ulke isimleri ve Turkce baskent isimlerini bir Map olarak kaydedin
         // Ulke isimleri key, baskent isimleri value olsun.
 
         Map<String,String> ulkelerMap=new TreeMap<>();//suan map'imiz bos

@@ -21,7 +21,7 @@ public class C02_ActionsAsagiyaInme extends TestBase {
         //asagiya inmek icin Actions class'ina ihtiyacimiz var
         Actions actions=new Actions(driver);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-        //sayfanin altina inmek icin yapariz Keys.PAGE_DOWN yapariz.1 veya 2 kez yapilabilir.
+        //sayfanin altina inmek icin Keys.PAGE_DOWN yapariz. 1 veya 2 kez yapilabilir.
 
         //4- videoyu izlemek icin Play tusuna basin
         // play butonu iframe icinde oldugundan, once iframe'e gecis yapmaliyiz.

@@ -44,7 +44,7 @@ public class C03_iFrame extends TestBase {
         // WebElement playIFrame = driver.findElement(By.xpath("(//iframe)[4]"));
         driver.switchTo().frame(playIframe);
 
-        driver.findElement(By.xpath("//button[@title='Lire']")).click();
+        driver.findElement(By.xpath("//button[@title='Lire']")).click();//burada iframe icindeki play tusu locate edildi
 
         // 5) ilk iframe’den çıkıp ana sayfaya dönünüz
         driver.switchTo().defaultContent();

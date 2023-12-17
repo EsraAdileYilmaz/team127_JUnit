@@ -97,7 +97,7 @@ public class C01_ExplicitlyWait {
         // 1.adim : bir wait objesi olusturun
         WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
         // 2. adim : bekleme icin olusturdugumuz wait objesini kullanarak
-        //           beklenecek webElementin locate'ini ve beklemeyi birlikte yapariz.
+        //           beklenecek webElement'in locate'ini ve beklemeyi birlikte yapariz.
         WebElement itsGoneYaziElementi=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@id='message']")));
         //"WebElement By.xpath() yolu ile locate edilip gorunur oluncaya kadar bekle " demis oluyoruz.
 

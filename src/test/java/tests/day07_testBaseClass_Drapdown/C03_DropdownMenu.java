@@ -44,8 +44,8 @@ public class C03_DropdownMenu extends TestBase {
         //     Dropdown menude secim yaptiktan sonra
         //     yapilan secimi yazdirmak isterseniz=>select.getFirstSelectedOption().getText() kullaniriz.
         System.out.println("Secilen tarih: "+ selectGun.getFirstSelectedOption().getText()+
-                           " "+selectAy.getFirstSelectedOption().getText()+
-                           " "+selectYil.getFirstSelectedOption().getText());
+                                         " "+selectAy.getFirstSelectedOption().getText()+
+                                         " "+selectYil.getFirstSelectedOption().getText());
 
 
         //	5. Ay dropdown menüdeki tum değerleri(value) yazdırın

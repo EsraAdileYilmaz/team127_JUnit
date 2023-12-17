@@ -14,7 +14,7 @@ public class C07_DosyaYukleme extends TestBase {
 
           /*
             Selenium'da webdriver ile islemlerimizi yapariz,
-            webdriver bizim bilgisayarimizdaki dosyalara ulasamaz ve kullanamaz.
+            ancak webdriver bizim bilgisayarimizdaki dosyalara ulasamaz ve kullanamaz.
             Dosya exists islemlerinde,Java'dan yararlanip
             dosya yolunu kullanarak islemler yapabiliriz.
 
@@ -38,7 +38,7 @@ public class C07_DosyaYukleme extends TestBase {
         // logo.png'yi yukleyelim.
 
         String dinamikDosyaYolu=System.getProperty("user.home")+  // herkeste farkli olan kisim
-                                "/Downloads/logo.png";            // herkeste ortak-ayni olan kisim
+                                           "/Downloads/logo.png"; // herkeste ortak-ayni olan kisim
 
         chooseFileButonu.sendKeys(dinamikDosyaYolu);
 
@@ -50,8 +50,6 @@ public class C07_DosyaYukleme extends TestBase {
         // 4)“File Uploaded!” textinin goruntulendigini test edelim.
         WebElement uplodedYaziElementi= driver.findElement(By.xpath("//*[text()='File Uploaded!']"));
         Assert.assertTrue(uplodedYaziElementi.isDisplayed());//1.test yolu
-
-
 
         String expectedYazi = "File Uploaded!";
         String actualYazi = uplodedYaziElementi.getText();

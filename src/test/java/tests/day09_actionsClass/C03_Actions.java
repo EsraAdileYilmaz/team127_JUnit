@@ -16,6 +16,7 @@ public class C03_Actions extends TestBase {
         //1- https://testotomasyonu.com/click sitesine gidin
         driver.get("https://testotomasyonu.com/click");
         ReusableMethods.bekle(3);//driver'in o sayfayi (actions'i) bulmasi icin bekletme yapmak gerekiyor
+
         //2- “DGI Drones” uzerinde sag click yapin
         Actions actions=new Actions(driver);//1.adim
         WebElement droneElementi= driver.findElement(By.id("pic2_thumb"));//2.adim

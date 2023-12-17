@@ -18,9 +18,9 @@ public class C04_WebTables extends TestBase {
          /*
             Klasik HTML kodlari kullanilarak olusturulan web tablolarinda,
             istedigimiz cell(hucre)'deki data'ya ulasmak icin,
-            sadece taglari kullanarak //tablo/tbody/satir(tr)/data(td) siralamasi kullaniriz.
+            sadece taglari kullanarak //tablo(table)/tbody/satir(tr)/data(td) siralamasi kullaniriz.
 
-            1- Eger 1 of 1 bilgisine ulasabiliyorsak tum yolu yazmamiza gerek yok
+            1- Eger 1 of 1 bilgisine ulasabiliyorsak tum yolu yazmamiza gerek yok.
             2- Eger sadece child HTML taglara bakmak isteniyorsa "/" kullaniriz,
                child HTML taglarla birlikte grandChild taglara da bakmak istersek "//" kullaniriz
 
@@ -66,7 +66,7 @@ public class C04_WebTables extends TestBase {
             Web table'da sutun yapisi yoktur,
             satirlar ve o satirlardaki datalar vardir.
 
-            sutun sayisini elde etmek icin,
+            Sutun sayisini elde etmek icin,
             herhangi bir satirdaki data sayisini esas aliriz.
          */
         //bunun en kolay yolu herhangi bir satirdaki hucre sayisini bulmaktir //table/tbody/tr[1]/td

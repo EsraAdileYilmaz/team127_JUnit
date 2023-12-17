@@ -20,16 +20,17 @@ public class C03_FilesExistsTesti extends TestBase {
         //3. logo.png dosyasını indirelim
         //bu dosyayi indirmek icin locate etmeli ve sonra click() yapmaliyim.
         driver.findElement(By.xpath("//a[text()='logo.png']")).click();
-        //indirecegim dosyayi locate ettim.
+        //indirecegim dosyayi locate ettim ve ona click() yaptim
 
         //4. Dosyanın başarıyla indirilip indirilmediğini test edelim
-        //bunun icin dosyayi indirip,dosya uzerinde sag tusa tiklayip
+
+        //Bunun icin dosyayi indirip,dosya uzerinde sag tusa tiklayip,
         // 'Lire les Informations" dan copier yaparak
         // dosya yolunu manuel alip bir String variable'a atamaliyiz.
-        //manuel olarak alinan dosya yolundaki Desktop yerine, yeni dosya indirmek icin Downloads eklemek gerekiyor.
-        //String dosyaYolu="/Users/familleyilmaz/Downloads/logo.png";
+        //manuel olarak alinan dosya yolundaki Desktop'i silip, yerine yeni dosya indirmek icin Downloads eklemek gerekiyor.
+        //String dosyaYolu="/Users/familleyilmaz/Desktop/logo.png";
         String dosyaYolu="/Users/familleyilmaz/Downloads/logo.png";
-        //bu kodla sunu demis oluyoruz.dosyaYolu'nu sana verdigim dosya, bilgisayarda varmi?
+        //bu kodla sunu demis oluyoruz=>dosyaYolu'nu sana verdigim dosya, bilgisayarda varmi?
         //bu kod sonucu boolean dondurur.Dosya varsa true,yoksa false dondurur
         ReusableMethods.bekle(2);
         System.out.println(Files.exists(Paths.get(dosyaYolu)));//bizde true yada false verir
@@ -41,7 +42,7 @@ public class C03_FilesExistsTesti extends TestBase {
 
 
         //6. Dosyanın başarıyla indirilip indirilmediğini test edelim
-        dosyaYolu="/Users/familleyilmaz/Downloads/spectrum-logo.png";//dosya yolunu manuel olarak aliyorum.Desktop kismini silip yerine Downloads kismini ekliyoruz
+        dosyaYolu="/Users/familleyilmaz/Downloads/spectrum-logo.png";//dosya yolunu manuel olarak aliyoruz.Desktop kismini silip yerine Downloads kismini ekliyoruz
         ReusableMethods.bekle(2);
         System.out.println(Files.exists(Paths.get(dosyaYolu)));//true
         Assert.assertTrue( Files.exists(Paths.get(dosyaYolu)));//burada testimizi yapiyoruz.

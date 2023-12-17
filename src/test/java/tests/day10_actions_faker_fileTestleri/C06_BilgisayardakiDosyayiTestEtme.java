@@ -15,7 +15,7 @@ public class C06_BilgisayardakiDosyayiTestEtme {
         String dosyaYolu="/Users/familleyilmaz/Downloads/logo.png";//bu kod dinamik deildir
         //dosya yolunu==> "Lire les informations" kismina basilinca cikan ekrandaki Emplacement kismindan aliyoruz
         ///Users/familleyilmaz/Desktop/logo.png bu sekilde bi dosya yolu elde ediyoruz,
-        // bunun Desktop yazan kismini silip yerine Downloads yaziyoruz.
+        // bunun Desktop yazan kismini silip, yerine Downloads yaziyoruz.
 
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));
 

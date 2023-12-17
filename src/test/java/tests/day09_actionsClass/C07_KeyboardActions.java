@@ -21,15 +21,16 @@ public class C07_KeyboardActions extends TestBase {
         //   ve Enter’a basarak arama yaptirin
         WebElement searchBox= driver.findElement(By.id("global-search"));
         ReusableMethods.bekle(2);
+
         Actions actions=new Actions(driver);
          actions.click(searchBox)
                 .keyDown(Keys.SHIFT)//SHIFT'e basili tut
                 .sendKeys("dell c")
                 .keyUp(Keys.SHIFT)//SHIFT'i birak
                 .sendKeys("ore ")
-                .keyDown(Keys.SHIFT)
+                .keyDown(Keys.SHIFT)//SHIFT'e basili tut
                 .sendKeys("i")
-                .keyUp(Keys.SHIFT)
+                .keyUp(Keys.SHIFT)//SHIFT'i birak
                 .sendKeys("3")
                 .perform();
         actions.sendKeys(Keys.ENTER).perform();

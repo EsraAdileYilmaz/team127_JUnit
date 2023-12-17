@@ -17,8 +17,8 @@ public class C05_Devoir_WebTables extends TestBase {
        //2) Headers da bulunan basliklari yazdirin
        //3) 3.sutunun basligini yazdirin
        //4) Tablodaki tum datalari yazdirin
-       //5)Tabloda kac tane bos olmayan cell (data) oldugunu yazdirin
-       //6)Tablodaki satir sayisini yazdirin
+       //5) Tabloda kac tane bos olmayan cell (data) oldugunu yazdirin
+       //6) Tablodaki satir sayisini yazdirin
        //7) Tablodaki sutun sayisini yazdirin
        //8) Tablodaki 3. kolonu yazdirin
        //9) Tabloda "First Name" i Kierra olan kisinin Salary'sini yazdirin
@@ -38,13 +38,22 @@ public class C05_Devoir_WebTables extends TestBase {
         System.out.println(driver.findElement(By.xpath("//div[text()='Age']")).getText());
 
         //4) Tablodaki tum datalari yazdirin
-        List<WebElement> tablodakiDataElementleri=driver.findElements(By.xpath("//*[@role='row']/*[@role='gridcell']"));
+        List<WebElement> tablodakiDataElementleri=driver.findElements(By.xpath("//*[@role='row']/*[@role='gridcell']"));//[@role='row']=satir [@role='gridcell']=herbir data,cell
         List<String>  tablodakiDataElementleriStr=ReusableMethods.stringListeDonustur(tablodakiDataElementleri);
         System.out.println(tablodakiDataElementleriStr);
 
         //5)Tabloda kac tane bos olmayan cell (data) oldugunu yazdirin
         System.out.println(tablodakiDataElementleriStr.size());//70 toplam data sayisi
+        tablodakiDataElementleri=driver.findElements(By.xpath("//*[@role='row']/*[@role='gridcell']"));
+        int sayac=0;
+        for (WebElement each:tablodakiDataElementleri
+             ) {
+            if( ! each.getText().isBlank()){
+                sayac++;
+            }
+        }
 
+        System.out.println("Bos olmayan cell sayisi: "+ sayac);
 
         //6)Tablodaki satir sayisini yazdirin
         List<WebElement> satirSayisiElementi= driver.findElements(By.xpath("//*[@role='row']"));

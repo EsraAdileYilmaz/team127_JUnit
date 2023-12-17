@@ -20,7 +20,7 @@ public class C03_Cookies extends TestBase {
         //2- tum cookie’leri listeleyin
         ReusableMethods.bekle(2);
         Set<Cookie> cookieSeti=driver.manage().getCookies();
-        int siraNo=1;
+        int siraNo=1;//Set index yapisini desteklemez buyuzden biz bu variable 'i atadik
         for (Cookie each:cookieSeti
              ) {
             System.out.println(siraNo + "==>" + each);
@@ -66,7 +66,7 @@ public class C03_Cookies extends TestBase {
 
         driver.manage().deleteCookieNamed("skin");
         Assert.assertTrue(driver.manage().getCookieNamed("skin") == null);
-        //yani silinen cookie'yi bulamayacagi icin value'sunu null dondurur.
+        //yani silinen cookie'yi bulamayacagi icin null dondurur.
 
 
         //8- tum cookie’leri silin ve silindigini test edin

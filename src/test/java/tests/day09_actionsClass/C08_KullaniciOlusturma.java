@@ -30,7 +30,7 @@ public class C08_KullaniciOlusturma extends TestBase {
         ReusableMethods.bekle(2);
         actions.click(firstNameBox)
                 .sendKeys("Esra")
-                .sendKeys(Keys.TAB)
+                .sendKeys(Keys.TAB)//TAB tusuyla yana gec
                 .sendKeys("Yilmaz")
                 .sendKeys(Keys.TAB)
                 .sendKeys("yilmaz@gmail.com")
@@ -43,9 +43,9 @@ public class C08_KullaniciOlusturma extends TestBase {
 
 
         //5- Kaydin olusturuldugunu test edin
-        //Kayit olusturulunca bizi signIn sayfasina yonlendiriyor
+        // Kayit olusturulunca bizi signIn sayfasina yonlendiriyor
         // Kaydin olusturuldugunu test etmek icin
-        //girdigimiz bilgilerle login olabildigimizi test edelim
+        // girdigimiz bilgilerle login olabildigimizi test edelim
         WebElement emailKutusu= driver.findElement(By.id("email"));
         WebElement passwordKutusu = driver.findElement(By.id("password"));
         WebElement signInButonu = driver.findElement(By.id("submitlogin"));

@@ -31,13 +31,13 @@ public class C02_iFrame extends TestBase {
 
     //3)Text Box’a “Merhaba Dunya!” yazin.
     /*Text Box elementi iframe'in icinde oldugu icin once iframe'i bir webelementi gibi
-      locate edip WebElemente atamak gerekir.
+      locate edip WebElement'e atamak gerekir.
       Sonra iframe'in icine girmek icin driver.switchTo().frame() yapilir.
       Enson istenen islem yapilir.
 
     */
     /*
-            Text box bir iframe'in icinde
+            Text box bir iframe'in icinde,
             iframe'in icinde olan elementlere ulasabilmek icin
             once iframe'e gecis yapmalisiniz.
 
@@ -47,17 +47,17 @@ public class C02_iFrame extends TestBase {
 
             iframe'e gecis yaparsaniz;
             driver orada kalir
-            yeniden anasayfa ile ilgili bir islem yapmak isterseniz
+            yeniden anasayfa ile ilgili bir islem yapmak isterseniz,
             driver'i yeniden anasayfaya gecirmelisiniz.
             Bununda 2 yolu vardir:
             1)driver.switchTo().parentFrame(); eger ic ice birden fazla iframe varsa
-                                             bir ustteki iframe'e gecis yapar.
-            2)driver.switchTo().defaultContent(); direk anasayfaya gecer.
+                                               driver bir ustteki iframe'e gecis yapar.
+            2)driver.switchTo().defaultContent(); ile driver direk anasayfaya gecer.
 
          */
 
     WebElement iFrameElementi= driver.findElement(By.tagName("iframe"));//locate ettik ve bir WebElemente atadik
-    driver.switchTo().frame(iFrameElementi);//iFrame'in icine gectik
+    driver.switchTo().frame(iFrameElementi);//driver iFrame'in icine gecti
 
     WebElement textBox= driver.findElement(By.xpath("//body[@id='tinymce']"));
     //WebElement textBoxKutusu = driver.findElement(By.tagName("p")); 2.locate yolu
