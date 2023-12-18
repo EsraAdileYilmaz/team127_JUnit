@@ -103,7 +103,7 @@ public class ReusableMethods {
 
         File geciciDosya = tss.getScreenshotAs(OutputType.FILE);
 
-        // 4.adim : gecici dosyayi, asil dosyaya kopyalayalim
+        // 4.adim : gecici dosyayi, asil-kalici dosyaya kopyalayalim
 
         try {
             FileUtils.copyFile(geciciDosya,tumSayfaScreenshot);

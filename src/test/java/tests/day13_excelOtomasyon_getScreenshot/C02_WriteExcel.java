@@ -38,10 +38,10 @@ public class C02_WriteExcel {
         sayfa1.getRow(14).createCell(4).setCellValue(54000);
 
         //9) Dosyayi kaydedelim
-        //biz bu degisiklikleri workbook uzerinde yaptik.oyuzden bu degisiklikleri gercek excel'e kaydetmemiz lazim
+        //Biz bu degisiklikleri workbook uzerinde yaptik.oyuzden bu degisiklikleri gercek excel'e kaydetmemiz lazim
         //AMMA gercek excel'e kaydederken bilgisayarimizdaki excel aciksa onu kapatmamiz gerekir.(Quitter yapmaliyiz)
         FileOutputStream fileOutputStream=new FileOutputStream(dosyaYolu);
-        //dosyaYolu nu verdigim dosyaya ekledigim bilgilerle akis sagla demis oluyoruz
+        //dosyaYolunu verdigim dosyaya ekledigim bilgilerle akis sagla demis oluyoruz
         workbook.write(fileOutputStream);//disardan gelen akisi workbook'a ekle
 
 

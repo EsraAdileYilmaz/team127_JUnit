@@ -41,10 +41,9 @@ public class C03_TumsayfaScreenshot extends TestBase {
 
         // 3.adim tss objesini kullanarak fotografi cekip, gecici bir dosyaya kaydedelim.
         File geciciDosya=tss.getScreenshotAs(OutputType.FILE);
-        //bu dosya gecici kaydedilen dosyadir.ve burda screenshot yapmis olduk
+        //bu dosya gecici kaydedilen dosyadir.ve burda screenshot(fotograf cekimi) yapmis olduk
 
         // 4.adim : gecici dosyayi, asil dosyaya kopyalayalim
-
         FileUtils.copyFile(geciciDosya,tumSayfaScreenshot);
 
         ReusableMethods.bekle(5);

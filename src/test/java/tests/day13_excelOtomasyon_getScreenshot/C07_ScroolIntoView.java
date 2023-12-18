@@ -15,11 +15,11 @@ public class C07_ScroolIntoView extends TestBase {
     @Test
     public void newProductTesti(){
 
-        // test otomasyonu anasayfaya gidin
+        // 1) test otomasyonu anasayfaya gidin
         driver.get("https://www.testotomasyonu.com");
         ReusableMethods.bekle(1);
 
-        // Best Sport Shoes bolumu gorununceye kadar asagi inin.
+        // 2) Best Sport Shoes bolumu gorununceye kadar asagi inin.
        /*
          Bu yontem ile asagiya inebildik
         AMMA bilgisayardan bilgisayara cozunurluk degisecegi icin
@@ -41,7 +41,7 @@ public class C07_ScroolIntoView extends TestBase {
         javascriptExecutor.executeScript("arguments[0].scrollIntoView();",bestSportShoesElementi);
         //olusturdugumuz javascript objesi ile ("bestSportShoesElementi" gorununceye kadar asagi in) demis oluyoruz.
 
-        // linki tiklayin
+        //3) linki tiklayin
         ReusableMethods.bekle(3);
         bestSportShoesElementi.click();
         //javascriptExecutor.executeScript("arguments[0].click();",bestSportShoesElementi);
@@ -49,7 +49,7 @@ public class C07_ScroolIntoView extends TestBase {
 
 
 
-        // h1 taginda "Best Sport Shoes For Multi Gender" yazdigini test edin
+        // 4) h1 taginda "Best Sport Shoes For Multi Gender" yazdigini test edin
         WebElement urunYaziElementi= driver.findElement(By.tagName("h1"));
         String expectedYazi="Best Sport Shoes For Multi Gender";
         String actualYazi= urunYaziElementi.getText();
