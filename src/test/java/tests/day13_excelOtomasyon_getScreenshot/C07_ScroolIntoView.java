@@ -18,6 +18,7 @@ public class C07_ScroolIntoView extends TestBase {
         // 1) test otomasyonu anasayfaya gidin
         driver.get("https://www.testotomasyonu.com");
         ReusableMethods.bekle(1);
+        //ekleme yapildi
 
         // 2) Best Sport Shoes bolumu gorununceye kadar asagi inin.
        /*
