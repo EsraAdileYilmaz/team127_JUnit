@@ -39,7 +39,7 @@ public class C03_iFrame extends TestBase {
         System.out.println("Sayfadaki iframe sayisi: "+iframeListesi.size());
 
         // 4) ilk iframe’deki (Youtube) play butonuna tıklayınız.
-        //iframe'e gecmek gerekir
+        //iframe'e gecmek gerekir.iframe'i locate edelim.
         WebElement playIframe= driver.findElement(By.xpath("//iframe[@wmode='transparent']"));
         // WebElement playIFrame = driver.findElement(By.xpath("(//iframe)[4]"));
         driver.switchTo().frame(playIframe);
@@ -50,7 +50,7 @@ public class C03_iFrame extends TestBase {
         driver.switchTo().defaultContent();
 
         //6) ikinci iframe’deki (Jmeter Made Easy) linke (https://www.guru99.com/live-selenium-project.html) tıklayınız
-        WebElement iframeTwo= driver.findElement(By.xpath("//iframe[@id='a077aa5e']"));
+        WebElement iframeTwo= driver.findElement(By.xpath("//iframe[@id='a077aa5e']"));//iframe locate ettik
         driver.switchTo().frame(iframeTwo);//iframe'e  gectik
 
         ReusableMethods.bekle(2);

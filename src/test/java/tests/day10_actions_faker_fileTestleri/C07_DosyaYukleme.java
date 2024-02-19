@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import tests.utilities.TestBase;
 
-public class C07_DosyaYukleme extends TestBase {
+public class  C07_DosyaYukleme extends TestBase {
 
 
     @Test

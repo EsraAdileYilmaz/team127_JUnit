@@ -39,7 +39,7 @@ public class C02_ExplicitlyWait {
         WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(40));
              // 2.adim : mumkunse kullanilacak webelementi locate et
              //          biz textbox'in kullanilabilir olmasini bekleyecegiz, textbox yukarda locate edildi.
-             // 3.adim : wait objesi ile istenen webelement uzerinde expected condition yaparak bekle.
+             // 3.adim : wait objesi ile istenen webelement uzerinde Expected conditions yaparak bekle.
                     wait.until(ExpectedConditions.elementToBeClickable(textboxElementi));
                     //textboxElementi clickable oluncaya kadar bekle.
 

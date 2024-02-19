@@ -34,14 +34,14 @@ public class C01_ExceliMapeAktarma {
 
             satirdakiUlkeIsmi=workbook.getSheet("Sayfa1").getRow(i).getCell(2).toString();
             satirdakiBaskentIsmi=workbook.getSheet("Sayfa1").getRow(i).getCell(3).toString();
-            ulkelerMap.put(satirdakiUlkeIsmi,satirdakiBaskentIsmi);//bu satirda" Ülke (Türkçe)	Başkent (Türkçe)" nin tamamini map'e yukledik
+            ulkelerMap.put(satirdakiUlkeIsmi,satirdakiBaskentIsmi);//bu satirda" Ülke (Türkçe),	Başkent (Türkçe)" nin tamamini map'e yukledik
         }
         //System.out.println(ulkelerMap);//{Afganistan=Kabil, Almanya=Berlin, Amerika Birleşik Devletleri=Washington DC, Andorra=Andorra la Vella, Angola=Luanda, Antigua ve Barbuda=Saint John’s, Arjantin=Buenos Aires, Arnavutluk=Tiran, Avustralya=Canberra, Avusturya=Viyana, ....}
 
 
         //2) Rusya'nin baskentinin Moskova oldugunu test edelim
         String expectedBaskentIsmi="Moskova";
-        String actualBaskentIsmi=ulkelerMap.get("Rusya");
+        String actualBaskentIsmi=ulkelerMap.get("Rusya");//burda key verilmis value'su getir diyoruz
         Assert.assertEquals(expectedBaskentIsmi,actualBaskentIsmi);
 
 

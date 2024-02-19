@@ -57,7 +57,7 @@ public class C06_KontrolsuzCokluWindowKullanimi extends TestBase {
              ) {
             if( ! each.equals(ilksayfaWHD)){//each'in getirdigi deger ilksayfaWHD degerine esit deilse
 
-                ikinciSayfaWHD=each;//each'in getirdigi 2.whd degerini String ikinciSayfaWHD'ye atayarak,bulmus oluyoruz
+                ikinciSayfaWHD=each;//each'in getirdigi 2.whd degerini String ikinciSayfaWHD="";ye atayarak,bulmus oluyoruz
             }
         }
 

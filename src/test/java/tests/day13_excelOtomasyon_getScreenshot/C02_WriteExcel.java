@@ -23,10 +23,10 @@ public class C02_WriteExcel {
 
         //3) Adimlari takip ederek Sayfa1’deki 1.satira(yani 0.indexe) kadar gidelim
         //4) 5.hucreye yeni bir cell olusturalim
-        sayfa1.getRow(0).createCell(4);
+        sayfa1.getRow(0).createCell(4);//1.satira 5.hucre ekledik
 
         //5) Olusturdugumuz hucreye “Nufus” yazdiralim
-        sayfa1.getRow(0).getCell(4).setCellValue("Nufus");//getCell(4).setCellValue("Nufus")=> olusturulan 4.cell'in icine Nufus value'su ekle
+        sayfa1.getRow(0).getCell(4).setCellValue("Nufus");//getCell(4).setCellValue("Nufus")=> olusturulan 4.cell'in icine value olarak Nufus ekle
 
         //6) 2.satir nufus kolonuna 1500000 yazdiralim
         sayfa1.getRow(1).createCell(4).setCellValue(1500000);
@@ -40,8 +40,8 @@ public class C02_WriteExcel {
         //9) Dosyayi kaydedelim
         //Biz bu degisiklikleri workbook uzerinde yaptik.oyuzden bu degisiklikleri gercek excel'e kaydetmemiz lazim
         //AMMA gercek excel'e kaydederken bilgisayarimizdaki excel aciksa onu kapatmamiz gerekir.(Quitter yapmaliyiz)
-        FileOutputStream fileOutputStream=new FileOutputStream(dosyaYolu);
-        //dosyaYolunu verdigim dosyaya ekledigim bilgilerle akis sagla demis oluyoruz
+        FileOutputStream fileOutputStream=new FileOutputStream(dosyaYolu);//dosya disina dogru akis sagliyoruz.
+        //dosyaYolunu verdigim, dosyaya ekledigim bilgileri disa akis sagla demis oluyoruz
         workbook.write(fileOutputStream);//disardan gelen akisi workbook'a ekle
 
 

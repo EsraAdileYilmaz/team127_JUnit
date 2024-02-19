@@ -43,7 +43,7 @@ public class C06_Devoir1 extends TestBase{
 
             //4)Visible text(gorunen metin) kullanarak secenek1'i (option 1) secin ve yazdirin
             WebElement dropdown3= driver.findElement(By.xpath("//select[@id='dropdown']"));
-            Select select3=new Select(dropdown1);
+            Select select3=new Select(dropdown3);
             select3.selectByVisibleText("Option 1");
             System.out.println(select3.getFirstSelectedOption().getText());
 
