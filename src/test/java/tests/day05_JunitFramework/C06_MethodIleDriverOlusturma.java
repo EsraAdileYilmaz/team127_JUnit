@@ -8,9 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class C06_MethodIleDriverOlusturma {
-    WebDriver driver; //tum methodlardan rahatlikla ulasilabilsin diye class levelda olusturduk
-    public void driverOlustur(){
+    WebDriver driver; //driver'a tum methodlardan rahatlikla ulasilabilsin diye class levelda olusturduk
 
+    public void driverOlustur(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -19,7 +19,7 @@ public class C06_MethodIleDriverOlusturma {
 
     @Test
     public void wisequarterTest(){
-        driverOlustur();//once driverOlustur() methodu calissin diyoruz
+        driverOlustur();//once driverOlustur() methodu calissin diyoruz.method call yapiyoruz
         driver.get("https://www.wisequarter.com");
         // title'in "Wise" icerdigini test edin
         String expectedTitleIcerik = "Wise";
@@ -33,7 +33,7 @@ public class C06_MethodIleDriverOlusturma {
 
     @Test
     public void testOtomasyonuTest(){
-        driverOlustur();
+        driverOlustur();//once driverOlustur() methodu calissin diyoruz.method call yapiyoruz
         // testotomasyonu.com adresine gidin
         driver.get("https://www.testotomasyonu.com");
         // title'in "Test Otomasyon" icerdigini test edin
@@ -50,7 +50,7 @@ public class C06_MethodIleDriverOlusturma {
 
     @Test
     public void googleTest(){
-        driverOlustur();
+        driverOlustur();//once driverOlustur() methodu calissin diyoruz.method call yapiyoruz
         // google.com adresine gidin
         driver.get("https://www.google.com");
         // url'in "google" icerdigini test edin

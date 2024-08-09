@@ -24,7 +24,8 @@ public class ReusableMethods {
          stringlerListesi.add(each.getText());
         }
         return stringlerListesi;
-    }
+    }//WebElementlerden olusan listeyi Stringlerden olusan listeye cevirme metodu
+
 
 
 

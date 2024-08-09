@@ -14,6 +14,17 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <!--
+    pom.xml bizim projemizin kalbidir.
+    projemize dahil olan tum kutuphaneleri buradan yonetebiliriz,
+    yani yukleyebilir,degistirebilir veya update edebiliriz
+
+
+    Bu islemleri mvnrepository.com adresine giderek yapabiliriz
+
+    Projemizdeki tum kutuphaneleri <dependencies>    </dependencies> taglarinin arasina koyacagiz
+    -->
+
 
     <dependencies>
 
@@ -73,13 +84,6 @@
             <artifactId>poi-ooxml</artifactId>
             <version>5.2.4</version>
         </dependency>
-
-
-
-
-
-
-
 
 
 

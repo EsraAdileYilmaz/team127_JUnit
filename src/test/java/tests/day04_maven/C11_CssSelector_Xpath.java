@@ -16,7 +16,7 @@ public class C11_CssSelector_Xpath {
         Xpath link olmasa bile yazisi olan webelementlerini
         yazi ile locate etmemize imkan tanir.
         Ornegin:By.xpath("//button[text()='Remove']")
-     */
+           */
 
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();

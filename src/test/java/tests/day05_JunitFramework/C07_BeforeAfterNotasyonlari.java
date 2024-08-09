@@ -25,8 +25,10 @@ public class C07_BeforeAfterNotasyonlari {
 
     @After
     public void teardown(){ //teardown()=kapanis() methodu
+
         driver.quit();
     }
+
     @Test
     public void wisequarterTest(){
         driver.get("https://www.wisequarter.com");
@@ -44,19 +46,19 @@ public class C07_BeforeAfterNotasyonlari {
         /*
             JUnit bir test method'u
             hicbir sorunla karsilasmadan calisip biterse
-            o test method'unu PASSED olarak algilar
+            o test method'unu PASSED olarak algilar.
 
             JUnit'e gore bir testin FAILED olabilmesi icin
             kodlarin bir sorunla karsilasmasi
-            ve kodlarin method'un sonuna kadar calismamasi gerekir
+            ve kodlarin method'un sonuna kadar calismamasi gerekir.
 
             Ornek olmasi icin biz mu method'da
             throw new AssertionFailedError() diyerek
             test failed oldugunda
-            kodun calismayi durdurmasini sagladik
+            kodun calismayi durdurmasini sagladik.
 
             JUnit'de exception olustugu icin
-            bu testi FAILED olarak etiketledi
+            bu testi FAILED olarak etiketledi.
          */
         // testotomasyonu.com adresine gidin
         driver.get("https://www.testotomasyonu.com");
