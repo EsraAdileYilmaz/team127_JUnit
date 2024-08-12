@@ -72,7 +72,7 @@ public class C05_Assertions {
         // logoTest => BestBuy logosunun görüntülendigini test edin
        //WebElement logoElementi= driver.findElement(By.xpath("(//img[@class='logo'])[1]"));
        WebElement logoElementi=driver.findElement(By.xpath("//*[@width='80']"));
-        Assert.assertTrue(logoElementi.isDisplayed());
+       Assert.assertTrue(logoElementi.isDisplayed());
 
 
 

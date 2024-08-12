@@ -16,22 +16,23 @@ import java.time.Duration;
 public class C06_CheckBox {
 
     WebDriver driver;
+
     @Before
-    public void setup(){
+    public void setup() {
         WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
     }
 
     @After
-    public void teardown(){
+    public void teardown() {
         driver.quit();
     }
 
     @Test
-    public void checkBoxTesti(){
+    public void checkBoxTesti() {
 
         /*
          a. Verilen web sayfasına gidin. https://testotomasyonu.com/form
@@ -44,10 +45,10 @@ public class C06_CheckBox {
         driver.get("https://testotomasyonu.com/form");
 
         // b. Sirt Agrisi ve Carpinti checkbox’larini secin
-        WebElement sirtAgrisiElementi= driver.findElement(By.id("gridCheck5"));
+        WebElement sirtAgrisiElementi = driver.findElement(By.id("gridCheck5"));
         sirtAgrisiElementi.click();
 
-        WebElement carpintiElementi= driver.findElement(By.id("gridCheck4"));
+        WebElement carpintiElementi = driver.findElement(By.id("gridCheck4"));
         //WebElement carpintiYaziElementi = driver.findElement(By.xpath("//*[@for='gridCheck4']"));
         carpintiElementi.click();
 
@@ -60,14 +61,13 @@ public class C06_CheckBox {
         //sayfanin asagisina inmek icin bu kismi ekledik.WebElementi gorunur yaptik boylece
 
         //  d. Seker ve Epilepsi checkbox’larininin seçili olmadigini test edin.
-        WebElement sekerElementi= driver.findElement(By.id("hastalikCheck2"));
+        WebElement sekerElementi = driver.findElement(By.id("hastalikCheck2"));
         Assert.assertFalse(sekerElementi.isSelected());
 
-        WebElement epilepsiElementi= driver.findElement(By.id("hastalikCheck7"));
+        WebElement epilepsiElementi = driver.findElement(By.id("hastalikCheck7"));
         Assert.assertFalse(epilepsiElementi.isSelected());
 
     }
-
 
 
 }
