@@ -19,10 +19,10 @@ public class C03_DropdownMenu extends TestBase {
         driver.get("https://testotomasyonu.com/form");
 
         //	1.Dogum tarihi gun seçeneğinden index kullanarak 5’i secin
-        // - ilk adim : kullanacagimiz ddm locate edip kaydedelim
+        // - ilk adim : kullanacagimiz dropdownmenu locate edip kaydedelim
         WebElement gunElementi = driver.findElement(By.xpath("(//select[@class='form-control'])[1]"));
         // - ikinci adim : bir select objesi olusturalim
-        //                 parametre olarak locate etttigimiz ddm'yu yazalim
+        //                 parametre olarak locate etttigimiz dropdownmenu'yu yazalim
         Select selectGun=new Select(gunElementi);
         // -ucuncu adim : olusturdugumuz select objesi ile istenen islemleri yapin
         selectGun.selectByIndex(5);//Gun yazisi 0.index oluyor
@@ -44,8 +44,8 @@ public class C03_DropdownMenu extends TestBase {
         //     Dropdown menude secim yaptiktan sonra
         //     yapilan secimi yazdirmak isterseniz=>select.getFirstSelectedOption().getText() kullaniriz.
         System.out.println("Secilen tarih: "+ selectGun.getFirstSelectedOption().getText()+
-                                         " "+selectAy.getFirstSelectedOption().getText()+
-                                         " "+selectYil.getFirstSelectedOption().getText());
+                                         " "+ selectAy.getFirstSelectedOption().getText()+
+                                         " "+ selectYil.getFirstSelectedOption().getText());
 
 
         //	5. Ay dropdown menüdeki tum değerleri(value) yazdırın

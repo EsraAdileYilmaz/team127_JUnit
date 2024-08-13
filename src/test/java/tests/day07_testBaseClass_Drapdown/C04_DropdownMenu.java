@@ -49,11 +49,11 @@ public class C04_DropdownMenu extends TestBase {
 
         //10. currency olarak “US Dollars” in secilmedigini test edin
         String unexpectedValue="US Dollars";
-        String actualValue=selectCurrency.getFirstSelectedOption().getText();
+        String actualValue=selectCurrency.getFirstSelectedOption().getText();//selectCurrency.selectByValue("EUR"); biz bunu sectik
 
         Assert.assertNotEquals(unexpectedValue,actualValue);
 
-        //Radio button  U.S. Dollars'in secilmedigini test edin.
+        //Radio button olarak U.S. Dollars'in secilmedigini test edin.
         WebElement usdollarRadioElementi=driver.findElement(By.id("pc_inDollars_true"));
         Assert.assertFalse(usdollarRadioElementi.isSelected());
 
