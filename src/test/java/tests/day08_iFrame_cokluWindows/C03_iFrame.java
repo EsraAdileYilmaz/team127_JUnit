@@ -28,9 +28,9 @@ public class C03_iFrame extends TestBase {
 
         //2)Cookies kabul edin
         // cookies de iframe icinde oldugundan once o iframe'e gecis yapalim
-        WebElement iframeElementi= driver.findElement(By.xpath("//iframe[@id='gdpr-consent-notice']"));  //iframe'e gecti
-        driver.switchTo().frame(iframeElementi);//iframe'e gectik
-        driver.findElement(By.xpath("(//span[@class='mat-button-wrapper'])[4]")).click();
+        //WebElement cookiesIframeElementi= driver.findElement(By.xpath("//iframe[@id='gdpr-consent-notice']"));//cookies iframe elementi
+        //driver.switchTo().frame(cookiesIframeElementi);//iframe'e gectik
+        //driver.findElement(By.xpath("(//span[@class='mat-button-wrapper'])[4]")).click();//cookies'i kabul ettik
 
         //3) sayfadaki iframe sayısını bulunuz ve yazdiriniz.
         //iframe'leri locate edip bir List<> icine atamaliyim
@@ -40,11 +40,11 @@ public class C03_iFrame extends TestBase {
 
         // 4) ilk iframe’deki (Youtube) play butonuna tıklayınız.
         //iframe'e gecmek gerekir.iframe'i locate edelim.
-        WebElement playIframe= driver.findElement(By.xpath("//iframe[@wmode='transparent']"));
         // WebElement playIFrame = driver.findElement(By.xpath("(//iframe)[4]"));
+        WebElement playIframe= driver.findElement(By.xpath("//iframe[@wmode='transparent']"));
         driver.switchTo().frame(playIframe);
 
-        driver.findElement(By.xpath("//button[@title='Lire']")).click();//burada iframe icindeki play tusu locate edildi
+        driver.findElement(By.xpath("//button[@title='Lire']")).click();//burada iframe icindeki play tusu locate edildi ve click yapildi
 
         // 5) ilk iframe’den çıkıp ana sayfaya dönünüz
         driver.switchTo().defaultContent();

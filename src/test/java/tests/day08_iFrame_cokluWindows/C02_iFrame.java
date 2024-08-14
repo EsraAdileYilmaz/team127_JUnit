@@ -8,8 +8,8 @@ import tests.utilities.TestBase;
 
 public class C02_iFrame extends TestBase {
 
-  @Test
-  public void  iframeTest(){
+    @Test
+    public void iframeTest() {
 
       /*
       1 ) https://the-internet.herokuapp.com/iframe adresine gidin.
@@ -21,20 +21,20 @@ public class C02_iFrame extends TestBase {
         ve  konsolda yazdirin.
        */
 
-    //1 ) https://the-internet.herokuapp.com/iframe adresine gidin.
-    driver.get("https://the-internet.herokuapp.com/iframe");
+        //1 ) https://the-internet.herokuapp.com/iframe adresine gidin.
+        driver.get("https://the-internet.herokuapp.com/iframe");
 
-    // 2) “An IFrame containing….” textinin erisilebilir oldugunu test edin ve konsolda yazdirin.
-    WebElement aniframeElementi =driver.findElement(By.tagName("h3"));
-    Assert.assertTrue(aniframeElementi.isEnabled());
-    System.out.println(aniframeElementi.getText());
+        // 2) “An IFrame containing….” textinin erisilebilir oldugunu test edin ve konsolda yazdirin.
+        WebElement aniframeElementi = driver.findElement(By.tagName("h3"));
+        Assert.assertTrue(aniframeElementi.isEnabled());
+        System.out.println(aniframeElementi.getText());
 
-    //3)Text Box’a “Merhaba Dunya!” yazin.
-    /*Text Box elementi iframe'in icinde oldugu icin once iframe'i bir webelementi gibi
+        //3)Text Box’a “Merhaba Dunya!” yazin.
+    /*
+      Text Box elementi iframe'in icinde oldugu icin once iframe'i bir webelementi gibi
       locate edip WebElement'e atamak gerekir.
       Sonra iframe'in icine girmek icin driver.switchTo().frame() yapilir.
       Enson istenen islem yapilir.
-
     */
     /*
             Text box bir iframe'in icinde,
@@ -50,30 +50,29 @@ public class C02_iFrame extends TestBase {
             yeniden anasayfa ile ilgili bir islem yapmak isterseniz,
             driver'i yeniden anasayfaya gecirmelisiniz.
             Bununda 2 yolu vardir:
-            1)driver.switchTo().parentFrame(); eger ic ice birden fazla iframe varsa
+            1)driver.switchTo().parentFrame(); Eger ic ice birden fazla iframe varsa
                                                driver bir ustteki iframe'e gecis yapar.
             2)driver.switchTo().defaultContent(); ile driver direk anasayfaya gecer.
 
          */
 
-    WebElement iFrameElementi= driver.findElement(By.tagName("iframe"));//locate ettik ve bir WebElemente atadik
-    driver.switchTo().frame(iFrameElementi);//driver iFrame'in icine gecti
+        WebElement iFrameElementi = driver.findElement(By.tagName("iframe"));//locate ettik ve bir WebElemente atadik
+        driver.switchTo().frame(iFrameElementi);//driver iFrame'in icine gecti
 
-    WebElement textBox= driver.findElement(By.xpath("//body[@id='tinymce']"));
-    //WebElement textBoxKutusu = driver.findElement(By.tagName("p")); 2.locate yolu
-    textBox.clear();
-    textBox.sendKeys("Merhaba Dunya!");
+        WebElement textBox = driver.findElement(By.xpath("//body[@id='tinymce']"));
+        //WebElement textBoxKutusu = driver.findElement(By.tagName("p")); 2.locate yolu
+        textBox.clear();
+        textBox.sendKeys("Merhaba Dunya!");
 
-    //4)TextBox’in altinda bulunan “Elemental Selenium” link textinin gorunur oldugunu dogrulayin
-    //        ve  konsolda yazdirin.
+        //4)TextBox’in altinda bulunan “Elemental Selenium” link textinin gorunur oldugunu dogrulayin
+        //        ve  konsolda yazdirin.
 
-    driver.switchTo().defaultContent();//iframe icindeki driver'imizi anasayfaya geri getirdik.
-    //driver.switchTo().parentFrame();//iframe icindeki driver'imizi bir ust sayfaya gecirir.
-    WebElement elemantalSeleniumElementi= driver.findElement(By.xpath("//*[text()='Elemental Selenium']"));
-    Assert.assertTrue(elemantalSeleniumElementi.isDisplayed());
-    System.out.println(elemantalSeleniumElementi.getText());
+        driver.switchTo().defaultContent();//iframe icindeki driver'imizi anasayfaya geri getirdik.
+        //driver.switchTo().parentFrame();//iframe icindeki driver'imizi bir ust sayfaya gecirir.
+        WebElement elemantalSeleniumElementi = driver.findElement(By.xpath("//*[text()='Elemental Selenium']"));
+        Assert.assertTrue(elemantalSeleniumElementi.isDisplayed());
+        System.out.println(elemantalSeleniumElementi.getText());
 
 
-
-  }
+    }
 }

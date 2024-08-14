@@ -11,8 +11,8 @@ public class C04_CokluWindowKullanimi extends TestBase {
 
         /**
          Biz bir driver ile yaptigimiz tum islemlerde ayni windowda calistik.
-         driver bu sebeple yaptigimiz her islemi ayni window icinde arastirir.
-         Isterseniz siz yeni bir tab (sekme) veya window olusturabilirsiniz
+         Driver bu sebeple yaptigimiz her islemi ayni window icinde arastirir.
+         Isterseniz siz yeni bir tab (sekme) veya window olusturabilirsiniz.
          */
 
         driver.get("https://www.testotomasyonu.com");
@@ -24,7 +24,7 @@ public class C04_CokluWindowKullanimi extends TestBase {
         driver.navigate().back();
         System.out.println(driver.getWindowHandle());
 
-        //yeniden test otomasyonu sayfasindayiz ve electronics linkini tiklayalim
+        //yeniden test otomasyonu sayfasindayiz ve Electronics linkini tiklayalim
         driver.findElement(By.xpath("(//a[text()='Electronics'])[3]")).click();
         System.out.println(driver.getWindowHandle());
 

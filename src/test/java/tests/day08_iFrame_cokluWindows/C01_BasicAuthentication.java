@@ -9,7 +9,7 @@ import tests.utilities.TestBase;
 public class C01_BasicAuthentication extends TestBase {
 
     @Test
-    public void basicAuthenticationTesti(){
+    public void basicAuthenticationTesti() {
 
         /*
           1- Bir class olusturun : BasicAuthentication
@@ -36,15 +36,12 @@ public class C01_BasicAuthentication extends TestBase {
         //bu sekilde bir yazimla siteye giris yapilabiliyor.ve bilgi alimi yapilabiliyor
 
         //4- Basarili sekilde sayfaya girildigini dogrulayin
-        WebElement girisYaziElementi= driver.findElement(By.tagName("h3"));
+        WebElement girisYaziElementi = driver.findElement(By.tagName("h3"));
         //bu yaziyi siteye girince quit'i iptal edip inspecter ettim
 
-        String expectedResult="Congratulations! You are logged in as: membername";
-        String actualResult=girisYaziElementi.getText();
-        Assert.assertEquals(expectedResult,actualResult);
-
-
-
+        String expectedResult = "Congratulations! You are logged in as: membername";
+        String actualResult = girisYaziElementi.getText();
+        Assert.assertEquals(expectedResult, actualResult);
 
 
     }

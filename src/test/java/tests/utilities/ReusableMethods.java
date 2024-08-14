@@ -46,7 +46,7 @@ public class ReusableMethods {
         for (String each:tumWhdSeti
              ) {
             String eachTitle=driver.switchTo().window(each).getTitle();
-            //driver'imiz each'in getirdigi herbir yeni window'a sirasiyla gecip oranin title'ini getirecek.bizde bunu String bir variable'a atayacagiz.
+            //driver'imiz each'in getirdigi herbir yeni tab/window'a sirasiyla gecip oranin title'ini getirecek.bizde bunu String bir variable'a atayacagiz.
 
             if(eachTitle.equals(hedefSayfaTitle)){//each'in getirdigi title,
                                                   //bizim hedef title'imiza esit oldugunda
@@ -54,11 +54,11 @@ public class ReusableMethods {
                 return driver;
             }
         }
-     //bu methodla istenilen kadar whd verilse bile icinden hedefSayfaTitle'ini bulup
-     //driver direk o window'a gecer
+
         return driver;
 
-    }
+    } //Bu methodla istenilen kadar whd verilse bile icinden hedefSayfaTitle'ini bulup
+      //driver direk o window'a gecer.
 
 
 
@@ -73,10 +73,10 @@ public class ReusableMethods {
         ) {
             return each;
         }
-     //bu methodla sadece 2 whd degeri uzerinden secim yapilabilir
+
         return null; // bu satirin hic calismayacagini biliyoruz
         // sadece javanin endiselerini gidermek icin yazdik.
-    }
+    } //Bu methodla sadece 2 whd degeri uzerinden secim yapilabilir
 
 
 

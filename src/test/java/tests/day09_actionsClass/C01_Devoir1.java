@@ -15,25 +15,25 @@ public class C01_Devoir1 extends TestBase {
         driver'i acilan sayfaya geciren bir method olusturun
 
         input : yeniTitle , Test Otomasyonu - Electronics
-
+        input : driver , Test Otomasyonu - Electronics
      */
 
     @Test
-    public void test01(){
+    public void test01() {
         //● https://testotomasyonu.com/addremove/ adresine gidin.
         driver.get("https://testotomasyonu.com/addremove/");
-        String ilkSayfaWHD= driver.getWindowHandle();
+        String ilkSayfaWHD = driver.getWindowHandle();
 
         //● Sayfadaki textin “Add/Remove Elements” olduğunu doğrulayın.
-        WebElement yaziElementi= driver.findElement(By.tagName("h2"));
-        String expectedYazi="Add/Remove Elements";
-        String actualYazi=yaziElementi.getText();
-        Assert.assertEquals(expectedYazi,actualYazi);
+        WebElement yaziElementi = driver.findElement(By.tagName("h2"));
+        String expectedYazi = "Add/Remove Elements";
+        String actualYazi = yaziElementi.getText();
+        Assert.assertEquals(expectedYazi, actualYazi);
 
         //● Sayfa başlığının(title) “Test Otomasyonu” olduğunu doğrulayın.
-        String expectedTitle="Test Otomasyonu";
-        String actualTitle= driver.getTitle();
-        Assert.assertEquals(expectedTitle,actualTitle);
+        String expectedTitle = "Test Otomasyonu";
+        String actualTitle = driver.getTitle();
+        Assert.assertEquals(expectedTitle, actualTitle);
 
         //● ’Please click for Electronics Products’ linkine tiklayin.
         ReusableMethods.bekle(2);
@@ -44,15 +44,15 @@ public class C01_Devoir1 extends TestBase {
         //Ancak bunun icin oncesinde manuel olarak o siteye gidip
         //Sitenin title'ini (ctrl+F) yapip ekranda "//title" locate'i ile
         //locate etmeliyim ve hedefSayfaTitle'i kismina parametre olarak atamaliyim.
-        driver= ReusableMethods.titleIleSayfaDegistir(driver,"Test Otomasyonu - Electronics");
+        driver = ReusableMethods.titleIleSayfaDegistir(driver, "Test Otomasyonu - Electronics");
 
 
         //● Bulunan urun sayisinin 16 olduğunu test edin
-        WebElement sonucYaziElementi= driver.findElement(By.className("product-count-text"));
-        String sonucYaziStr=sonucYaziElementi.getText().replaceAll("\\D","");//"16"
-        int actualSonucSayi=Integer.parseInt(sonucYaziStr);//16
-        int expectedSonucSayi=16;
-        Assert.assertEquals(expectedSonucSayi,actualSonucSayi);
+        WebElement sonucYaziElementi = driver.findElement(By.className("product-count-text"));
+        String sonucYaziStr = sonucYaziElementi.getText().replaceAll("\\D", "");//"16"
+        int actualSonucSayi = Integer.parseInt(sonucYaziStr);//16
+        int expectedSonucSayi = 16;
+        Assert.assertEquals(expectedSonucSayi, actualSonucSayi);
         ReusableMethods.bekle(2);
 
         //● Ilk actiginiz addremove sayfasina donun
@@ -60,13 +60,9 @@ public class C01_Devoir1 extends TestBase {
         driver.switchTo().window(ilkSayfaWHD);//ilkSayfaWHD'nin oldugu window'a gec
 
         //● Url’in addremove icerdigini test edin
-        String expectedURL="addremove";
-        String actualURL= driver.getCurrentUrl();
+        String expectedURL = "addremove";
+        String actualURL = driver.getCurrentUrl();
         Assert.assertTrue(actualURL.contains(expectedURL));
-
-
-
-
 
 
     }
