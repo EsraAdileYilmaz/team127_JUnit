@@ -49,11 +49,15 @@ public class C10_Devoir_Iframe_Alert extends TestBase {
 
 
         //7)"https://webdriveruniversity.com/index.html" adresine gittigini test edin.
+        /*
         WebElement baslikYaziElementi=driver.findElement(By.xpath("//h1[text()='My Courses & Promo Codes']"));
         String actualBaslikYazisi= baslikYaziElementi.getText();
         String expectedBaslikYazisi="My Courses & Promo Codes";
         Assert.assertEquals(expectedBaslikYazisi,actualBaslikYazisi);
+        */
 
-
+        String expectedUrl="https://webdriveruniversity.com/index.html";
+        String actualUrl=driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
     }
 }

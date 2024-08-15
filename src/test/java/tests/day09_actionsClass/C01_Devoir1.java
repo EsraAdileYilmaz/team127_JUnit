@@ -14,8 +14,7 @@ public class C01_Devoir1 extends TestBase {
         eger yeni acilan tab/window'un title degeri biliniyorsa
         driver'i acilan sayfaya geciren bir method olusturun
 
-        input : yeniTitle , Test Otomasyonu - Electronics
-        input : driver , Test Otomasyonu - Electronics
+        input : driver , yeniTitle
      */
 
     @Test

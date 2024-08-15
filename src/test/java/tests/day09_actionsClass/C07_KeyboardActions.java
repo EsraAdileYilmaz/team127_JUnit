@@ -12,19 +12,19 @@ import tests.utilities.TestBase;
 public class C07_KeyboardActions extends TestBase {
 
     @Test
-    public void test01(){
+    public void test01() {
 
         //2- https://www.testotomasyonu.com sayfasina gidelim
         driver.get("https://www.testotomasyonu.com");
 
         //3- Arama kutusuna actions method’larini kullanarak “DELL Core I3” yazdirin
         //   ve Enter’a basarak arama yaptirin
-        WebElement searchBox= driver.findElement(By.id("global-search"));
+        WebElement searchBox = driver.findElement(By.id("global-search"));
         ReusableMethods.bekle(2);
 
-        Actions actions=new Actions(driver);
-         actions.click(searchBox)
-                .keyDown(Keys.SHIFT)//SHIFT'e basili tut
+        Actions actions = new Actions(driver);
+        actions.click(searchBox)//Once yazmaya baslayabilmek icin arama kutusuna click() yapmaliyiz
+                .keyDown(Keys.SHIFT)//SHIFT'e basili tut.cunku buyuk harfle yazmaliyiz
                 .sendKeys("dell c")
                 .keyUp(Keys.SHIFT)//SHIFT'i birak
                 .sendKeys("ore ")
@@ -37,14 +37,9 @@ public class C07_KeyboardActions extends TestBase {
 
         //4- Bulunan urun isminde “DELL Core I3” bulundugunu test edin
         WebElement urunIsimElementi = driver.findElement(By.xpath("//*[@class='prod-title mb-3 ']"));
-        String expectedUrunisim="DELL Core I3";
-        String actualUrunisim=urunIsimElementi.getText();
+        String expectedUrunisim = "DELL Core I3";
+        String actualUrunisim = urunIsimElementi.getText();
         Assert.assertTrue(actualUrunisim.contains(expectedUrunisim));
-
-
-
-
-
 
 
     }

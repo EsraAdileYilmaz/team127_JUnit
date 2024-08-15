@@ -29,7 +29,7 @@ public class C03_Actions extends TestBase {
         Assert.assertEquals(expectedAlertYazi,actualAlertYazi);
 
         //4- Tamam diyerek alert’i kapatalim
-        driver.switchTo().alert().accept();//driver alert'e gecip cikan yaziti kabul etti
+        driver.switchTo().alert().accept();//driver alert'e gecip cikan yaziyi kabul etti
 
     }
 }

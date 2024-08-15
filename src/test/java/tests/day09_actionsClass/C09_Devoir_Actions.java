@@ -33,7 +33,8 @@ public class C09_Devoir_Actions extends TestBase {
         //3) "Link 1"e tiklayin
         ReusableMethods.bekle(3);
        WebElement link1=driver.findElement(By.xpath("(//a[text()='Link 1'])[1]"));
-       link1.sendKeys(Keys.ENTER);
+       //link1.sendKeys(Keys.ENTER);
+        link1.click();
 
         //4) Popup mesajini yazdirin
         System.out.println(driver.switchTo().alert().getText());

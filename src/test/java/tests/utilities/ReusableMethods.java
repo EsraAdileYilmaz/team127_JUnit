@@ -44,7 +44,7 @@ public class ReusableMethods {
 
         Set<String> tumWhdSeti=driver.getWindowHandles();
         for (String each:tumWhdSeti
-             ) {
+             ) {//each her bir Whd degerini getirecek sirayla
             String eachTitle=driver.switchTo().window(each).getTitle();
             //driver'imiz each'in getirdigi herbir yeni tab/window'a sirasiyla gecip oranin title'ini getirecek.bizde bunu String bir variable'a atayacagiz.
 
@@ -58,7 +58,7 @@ public class ReusableMethods {
         return driver;
 
     } //Bu methodla istenilen kadar whd verilse bile icinden hedefSayfaTitle'ini bulup
-      //driver direk o window'a gecer.
+      //driver direk o window'a gecer. driver = ReusableMethods.titleIleSayfaDegistir(driver,"yenititle")
 
 
 
@@ -66,17 +66,18 @@ public class ReusableMethods {
 
         Set<String > tumWhdSeti = driver.getWindowHandles();
 
-        tumWhdSeti.remove(ilkSayfaWhd);//Set'te bulunan iki whd degerinden, ilk kaydedilen whd'yi silip
-                                       //kalan whd'yi String bir variable'a atayip donduruyor.
+        tumWhdSeti.remove(ilkSayfaWhd);//Set'te bulunan iki whd degerinden,kaydedilen ilk sayfa whd'yi silip
+                                       //kalan ikinci whd'yi kullaniyoruz.
 
         for (String each:tumWhdSeti
         ) {
             return each;
         }
 
-        return null; // bu satirin hic calismayacagini biliyoruz
-        // sadece javanin endiselerini gidermek icin yazdik.
+        return null; //Bu satirin hic calismayacagini biliyoruz.sadece javanin endiselerini gidermek icin yazdik.
+
     } //Bu methodla sadece 2 whd degeri uzerinden secim yapilabilir
+      //String ikinciWhd = ReusableMethods.ilkSayfaWhdIleIkinciSayfaWhdBul(driver, ilkSayfaWhd); yapilarak kullanilir
 
 
 

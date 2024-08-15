@@ -12,7 +12,7 @@ import tests.utilities.TestBase;
 public class C08_KullaniciOlusturma extends TestBase {
 
     @Test
-    public void kullaniciOlusturmaTesti(){
+    public void kullaniciOlusturmaTesti() {
 
         //1- https://www.testotomasyonu.com sayfasina gidelim
         driver.get("https://www.testotomasyonu.com");
@@ -24,11 +24,11 @@ public class C08_KullaniciOlusturma extends TestBase {
         driver.findElement(By.xpath("//*[text()=' Sign Up']")).click();
 
         //4- Ad, soyad, mail ve sifre kutularina deger yazalim ve Sign Up butonuna basalim
-        WebElement firstNameBox= driver.findElement(By.id("firstName"));
+        WebElement firstNameBox = driver.findElement(By.id("firstName"));
 
-        Actions actions=new Actions(driver);
+        Actions actions = new Actions(driver);
         ReusableMethods.bekle(2);
-        actions.click(firstNameBox)
+        actions.click(firstNameBox)//Ilk kutucuga tiklanir sonrasinda tab'la devam edilir
                 .sendKeys("Esra")
                 .sendKeys(Keys.TAB)//TAB tusuyla yana gec
                 .sendKeys("Yilmaz")
@@ -39,14 +39,14 @@ public class C08_KullaniciOlusturma extends TestBase {
                 .sendKeys(Keys.TAB)
                 .sendKeys("12345")
                 .perform();
-        driver.findElement(By.id("btn-submit-form")).click();
+        driver.findElement(By.id("btn-submit-form")).click();//SignUp butonuna bastik
 
 
         //5- Kaydin olusturuldugunu test edin
         // Kayit olusturulunca bizi signIn sayfasina yonlendiriyor
         // Kaydin olusturuldugunu test etmek icin
         // girdigimiz bilgilerle login olabildigimizi test edelim
-        WebElement emailKutusu= driver.findElement(By.id("email"));
+        WebElement emailKutusu = driver.findElement(By.id("email"));
         WebElement passwordKutusu = driver.findElement(By.id("password"));
         WebElement signInButonu = driver.findElement(By.id("submitlogin"));
 
@@ -55,7 +55,7 @@ public class C08_KullaniciOlusturma extends TestBase {
         signInButonu.click();
 
         ReusableMethods.bekle(2);
-        WebElement logoutLinki= driver.findElement(By.xpath("//span[text()='Logout']"));
+        WebElement logoutLinki = driver.findElement(By.xpath("//span[text()='Logout']"));
         Assert.assertTrue(logoutLinki.isDisplayed());
         logoutLinki.click();
 
