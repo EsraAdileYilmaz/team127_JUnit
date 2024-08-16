@@ -23,19 +23,20 @@ public class C04_DosyaYolunuDinamikYapma {
                dosya yolunu bu iki kodu kullanarak dinamik hale getirmeliyiz.
          */
 
-        System.out.println(System.getProperty("user.dir"));//   /Users/familleyilmaz/IdeaProjects/com.team127_Junit
+        System.out.println(System.getProperty("user.dir"));//==>/Users/familleyilmaz/IdeaProjects/com.team127_Junit
         //calistigimiz projenin dosyayolunu verdi.
         //projemiz icindeki bir dosyanin varligini test etmek icin bu kod kullanilir.
-        System.out.println(System.getProperty("user.home"));//  /Users/familleyilmaz
+        System.out.println(System.getProperty("user.home"));//==>/Users/familleyilmaz
         //Bilgisayarin ana dosya yolunu verdi.Ana dosyanin halini verdi.
         //projemizin disinda ama bilgisayarin icindeki bir dosyayi test etmek istiyorsak bu kod kullanilir.
 
             /*
-            ("user.dir")==>burasi herkeste farkli olabilir
+            ("user.dir")==>burasi herkeste farkli olabilir.Dosya proje icindeyse
+            ("user.home")==>burasi herkeste farkli olabilir.Dosya bilgisayardaysa
              */
 
 
-        // /Users/familleyilmaz/IdeaProjects/com.team127_Junit/src/test/java/tests/utilities/TestBase.java
+        //==> /Users/familleyilmaz/IdeaProjects/com.team127_Junit/src/test/java/tests/utilities/TestBase.java
         //buda TestBase class'inin dosya yolu
 
     }

@@ -34,8 +34,8 @@ public class C01_FacebookKullaniciOlusturma extends TestBase {
 
         String email = faker.internet().emailAddress();
         //faker class ile aldigimiz fake-mail adresini buraya kaydediyoruz cunku
-        //sonrasinda ayni maille bir onay bekliyor.
-        actions.click(prenomBox)//ilk kutuya click() yapilarak devam edilir
+        //sonrasinda ayni maille bir onay yapiliyor.
+        actions.click(prenomBox)//ilk kutuya click() yapilarak baslanir.
                 .sendKeys(faker.name().firstName())
                 .sendKeys(Keys.TAB)
                 .sendKeys(faker.name().lastName())
@@ -55,7 +55,7 @@ public class C01_FacebookKullaniciOlusturma extends TestBase {
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.ARROW_RIGHT)//Keys.ARROW_RIGHT ile Male'e click() yapti.
-                .sendKeys(Keys.LEFT)//once Keys.ARROW_RIGHT yapip masculin click()leniyor sonra Keys.LEFT yapincada Female click() leniyor
+                .sendKeys(Keys.LEFT)//once Keys.ARROW_RIGHT yapip Male click()'leniyor sonra Keys.LEFT yapincada Female click()'leniyor
                 .perform();
 
         //5- Kaydol tusuna basalim

@@ -33,7 +33,7 @@ public class C03_FilesExistsTesti extends TestBase {
         //bu kodla sunu demis oluyoruz=>dosyaYolu'nu sana verdigim dosya, bilgisayarda varmi?
         //bu kod sonucu boolean dondurur.Dosya varsa true,yoksa false dondurur
         ReusableMethods.bekle(2);
-        System.out.println(Files.exists(Paths.get(dosyaYolu)));//bizde true yada false verir
+        System.out.println(Files.exists(Paths.get(dosyaYolu)));//bize true yada false verir.Bu kodla sunu demis oluyoruz=>dosyaYolu'nu sana verdigim dosya, bilgisayarda varmi?
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));//burada testimizi yapiyoruz.
 
 
