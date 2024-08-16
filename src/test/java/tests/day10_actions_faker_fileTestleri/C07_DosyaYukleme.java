@@ -6,11 +6,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import tests.utilities.TestBase;
 
-public class  C07_DosyaYukleme extends TestBase {
+public class C07_DosyaYukleme extends TestBase {
 
 
     @Test
-    public void dosyaYuklemeTesti(){
+    public void dosyaYuklemeTesti() {
 
           /*
             Selenium'da webdriver ile islemlerimizi yapariz,
@@ -30,15 +30,15 @@ public class  C07_DosyaYukleme extends TestBase {
 
         // 2)chooseFile(choisir un fichier) butonuna basalim
         //Yuklemek istediginiz dosyayi secelim.
-        WebElement chooseFileButonu =driver.findElement(By.id("file-upload"));
+        WebElement chooseFileButonu = driver.findElement(By.id("file-upload"));
 
-        // testlerimizin butun takim uyelerinde calisabilmesi icin
+        // Testlerimizin butun takim uyelerinde calisabilmesi icin
         // dosya yolunu dinamik yapmaliyiz.
         // biz bir onceki test'de downloads'a indirdigimiz
         // logo.png'yi yukleyelim.
 
-        String dinamikDosyaYolu=System.getProperty("user.home")+  // herkeste farkli olan kisim
-                                           "/Downloads/logo.png"; // herkeste ortak-ayni olan kisim
+        String dinamikDosyaYolu = System.getProperty("user.home") +  // user.home'u kullandik cunku dosya projede deil bilgisayarin icinde.herkeste farkli olan kisim
+                "/Downloads/logo.png"; // herkeste ortak-ayni olan kisim
 
         chooseFileButonu.sendKeys(dinamikDosyaYolu);
 
@@ -48,18 +48,12 @@ public class  C07_DosyaYukleme extends TestBase {
 
 
         // 4)“File Uploaded!” textinin goruntulendigini test edelim.
-        WebElement uplodedYaziElementi= driver.findElement(By.xpath("//*[text()='File Uploaded!']"));
+        WebElement uplodedYaziElementi = driver.findElement(By.xpath("//*[text()='File Uploaded!']"));
         Assert.assertTrue(uplodedYaziElementi.isDisplayed());//1.test yolu
 
         String expectedYazi = "File Uploaded!";
         String actualYazi = uplodedYaziElementi.getText();
-        Assert.assertEquals(expectedYazi,actualYazi);//2.test yolu
-
-
-
-
-
-
+        Assert.assertEquals(expectedYazi, actualYazi);//2.test yolu
 
 
     }

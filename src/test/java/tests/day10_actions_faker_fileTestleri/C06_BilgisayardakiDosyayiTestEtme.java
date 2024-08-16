@@ -9,10 +9,10 @@ import java.nio.file.Paths;
 public class C06_BilgisayardakiDosyayiTestEtme {
 
     @Test
-    public void test01(){
+    public void test01() {
 
         // Downloads'da logo.png oldugunu test edin
-        String dosyaYolu="/Users/familleyilmaz/Downloads/logo.png";//bu kod dinamik deildir
+        String dosyaYolu = "/Users/familleyilmaz/Downloads/logo.png";//bu kod dinamik deildir
         //dosya yolunu==> "Lire les informations" kismina basilinca cikan ekrandaki Emplacement kismindan aliyoruz
         ///Users/familleyilmaz/Desktop/logo.png bu sekilde bi dosya yolu elde ediyoruz,
         // bunun Desktop yazan kismini silip, yerine Downloads yaziyoruz.
@@ -30,7 +30,7 @@ public class C06_BilgisayardakiDosyayiTestEtme {
          */
 
 
-        String dinamikDosyaYolu= System.getProperty("user.home") +"/Downloads/logo.png";
+        String dinamikDosyaYolu = System.getProperty("user.home") + "/Downloads/logo.png";
         //dinamik dosya yoludur ve herkeste calisir
 
         Assert.assertTrue(Files.exists(Paths.get(dinamikDosyaYolu)));
