@@ -1,10 +1,7 @@
 package tests.utilities;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class ReusableMethods {
+public class ReusableMethods extends TestBase{
 
     public static List<String> stringListeDonustur(List<WebElement> elementlerListesi){
 
@@ -25,6 +22,7 @@ public class ReusableMethods {
         }
         return stringlerListesi;
     }//WebElementlerden olusan listeyi Stringlerden olusan listeye cevirme metodu
+     //List<String> baslikElementleri =ReusableMethods.stringListeDonustur(baslikElementleriListi);
 
 
 
@@ -189,6 +187,16 @@ public class ReusableMethods {
             throw new RuntimeException(e);
         }
     }
+
+    public String getCellData(int satirNo, int sutunNo) {
+        // ornegin==> //tbody/tr[4]/td[3]    tr[]=satir   td[]=sutun  asagida bunu dinamik olarak yazacagiz.
+
+        String dinamikXpath = "//tbody/tr[" + satirNo + "]/td[" + sutunNo + "]";
+
+        WebElement istenenCellDataElementi = driver.findElement(By.xpath(dinamikXpath));
+
+        return istenenCellDataElementi.getText();
+    }//Bu method klasik html kodlari ile yazilmis olan tablolarda satir sutun sayisi verilen hucrenin bilgisini dondurur
 
 
 

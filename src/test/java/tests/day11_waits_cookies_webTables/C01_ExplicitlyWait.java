@@ -27,10 +27,10 @@ public class C01_ExplicitlyWait {
 
 
     @Test
-    public void implicitlyWaitTesti(){
+    public void implicitlyWaitTesti() {
 
         WebDriverManager.chromedriver().setup();
-        WebDriver driver=new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -43,7 +43,7 @@ public class C01_ExplicitlyWait {
 
         //5. “It’s gone!” mesajinin goruntulendigini dogrulayin.
         //WebElement itsgoneElementi = driver.findElement(By.xpath("//*[text()=\"It's gone!\"]"));
-        WebElement itsgoneElementi= driver.findElement(By.xpath("//p[@id='message']"));
+        WebElement itsgoneElementi = driver.findElement(By.xpath("//p[@id='message']"));
         Assert.assertTrue(itsgoneElementi.isDisplayed());
 
         //6. Add buttonuna basin
@@ -51,7 +51,7 @@ public class C01_ExplicitlyWait {
 
         //7. "It’s back" mesajinin gorundugunu test edin
         //WebElement itsBackElementi = driver.findElement(By.xpath("//*[text()=\"It's back!\"]"));
-        WebElement itsbackElementi= driver.findElement(By.xpath("//p[@id='message']"));
+        WebElement itsbackElementi = driver.findElement(By.xpath("//p[@id='message']"));
         Assert.assertTrue(itsbackElementi.isDisplayed());
 
 
@@ -61,12 +61,12 @@ public class C01_ExplicitlyWait {
     }
 
     @Test
-    public void explicitlyWaitTesti(){
+    public void explicitlyWaitTesti() {
 
-      WebDriverManager.chromedriver().setup();
-      WebDriver driver=new ChromeDriver();
-      driver.manage().window().maximize();
-      //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         //3. https://the-internet.herokuapp.com/dynamic_controls adresine gidin.
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
@@ -95,10 +95,10 @@ public class C01_ExplicitlyWait {
              */
 
         // 1.adim : bir wait objesi olusturun
-        WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         // 2. adim : bekleme icin olusturdugumuz wait objesini kullanarak
         //           beklenecek webElement'in locate'ini ve beklemeyi birlikte yapariz.
-        WebElement itsGoneYaziElementi=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@id='message']")));
+        WebElement itsGoneYaziElementi = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@id='message']")));
         //"WebElement By.xpath() yolu ile locate edilip gorunur oluncaya kadar bekle " demis oluyoruz.
 
 
@@ -110,7 +110,7 @@ public class C01_ExplicitlyWait {
         //"It’s back" mesajina basildigi an goruntulenemiyor belli bir sure beklemek gerekiyor.
         // 1.adim : bir wait objesi olusturun
         // ancak wait objesi yukarda olusturuldugu icin direk kullanacagiz ve beklenecek webElementin locate'ini ve beklemeyi birlikte yapariz.
-        WebElement itsbackElementi=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@id='message']")));
+        WebElement itsbackElementi = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@id='message']")));
         //"WebElement locate edilip gorunur oluncaya kadar bekle " demis oluyoruz.Ayni anda testimizide yapmis oluyoruz.
 
 

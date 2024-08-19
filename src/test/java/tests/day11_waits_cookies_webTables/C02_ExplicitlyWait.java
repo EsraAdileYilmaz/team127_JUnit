@@ -16,48 +16,42 @@ import java.time.Duration;
 public class C02_ExplicitlyWait {
 
     @Test
-    public void explicitlyWaitTesti(){
+    public void explicitlyWaitTesti() {
 
         WebDriverManager.chromedriver().setup();
-        WebDriver driver=new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
         //3. https://the-internet.herokuapp.com/dynamic_controls adresine gidin.
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
 
         //4. Textbox’in etkin olmadigini(enabled) dogrulayın
-        WebElement textboxElementi= driver.findElement(By.xpath("//input[@type='text']"));
+        WebElement textboxElementi = driver.findElement(By.xpath("//input[@type='text']"));
         //textbox elementi gorulebilir ve locate edilebilir ama kullanilamaz durumdadir.
-        Assert.assertFalse(textboxElementi.isEnabled());
+        Assert.assertFalse(textboxElementi.isEnabled());//yani bu webelement e erisilemiyor.
 
         //5. Enable butonuna tıklayın
         driver.findElement(By.xpath("//button[text()='Enable']")).click();
 
         //ve textbox etkin oluncaya kadar bekleyin.
         //burada textbox'in etkin olmasi icin bekleme yapmamiza ihtiyac var
-             // 1.adim : wait objesi olustur
-        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(40));
-             // 2.adim : mumkunse kullanilacak webelementi locate et
-             //          biz textbox'in kullanilabilir olmasini bekleyecegiz, textbox yukarda locate edildi.
-             // 3.adim : wait objesi ile istenen webelement uzerinde Expected conditions yaparak bekle.
-                    wait.until(ExpectedConditions.elementToBeClickable(textboxElementi));
-                    //textboxElementi clickable oluncaya kadar bekle.
+        // 1.adim : wait objesi olustur
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        // 2.adim : mumkunse kullanilacak webelementi locate et
+        //          biz textbox'in kullanilabilir olmasini bekleyecegiz, textbox yukarda locate edildi.
+        // 3.adim : wait objesi ile istenen webelement uzerinde Expected conditions yaparak bekle.
+        wait.until(ExpectedConditions.elementToBeClickable(textboxElementi));
+        //textboxElementi clickable oluncaya kadar bekle.
 
 
         //6. “It’s enabled!” mesajinin goruntulendigini dogrulayın.
-        WebElement itsEnabledElementi= driver.findElement(By.xpath("//p[text()=\"It's enabled!\"]"));
+        WebElement itsEnabledElementi = driver.findElement(By.xpath("//p[text()=\"It's enabled!\"]"));
 
         //7. Textbox’in etkin oldugunu(enabled) dogrulayın.
         Assert.assertTrue(itsEnabledElementi.isEnabled());
 
         // 8.Sayfayi kapatin.
         driver.quit();
-
-
-
-
-
-
 
 
     }
