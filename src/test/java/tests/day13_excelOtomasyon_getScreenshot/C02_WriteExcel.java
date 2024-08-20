@@ -18,7 +18,7 @@ public class  C02_WriteExcel {
         String dosyaYolu = "src/test/java/tests/day12_webTables_excelOtomasyon/ulkeler.xlsx";//bu yolda bir dosya var demek
         FileInputStream fileInputStream = new FileInputStream(dosyaYolu);//FileInputStream objesi=yukarda yolu verilen dosyayi okuyor.
         Workbook workbook = WorkbookFactory.create(fileInputStream);//okunan dosya icindeki bilgileri kaydetmek ve uzerinde islem yapmak icin workbook(kopya excell) objesi olusturuyoruz
-        Sheet sayfa1 = workbook.getSheet("Sayfa1");//bunu yaparak direk Sayfa1'e geldik
+        Sheet sayfa1 = workbook.getSheet("Sayfa1");//bunu yaparak direk excel icindeki Sayfa1'e geldik
 
 
         //3) Adimlari takip ederek Sayfa1’deki 1.satira(yani 0.indexe) kadar gidelim
