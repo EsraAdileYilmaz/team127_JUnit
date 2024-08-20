@@ -10,21 +10,21 @@ import tests.utilities.TestBase;
 
 public class C04_ScreenshotIleAramaTesti extends TestBase {
 
-   @Test
-   public void aramaTesti(){
+    @Test
+    public void aramaTesti() {
 
-      //1) testotomasyonu anasayfaya gidin
-      driver.get("https://www.testotomasyonu.com");
+        //1) testotomasyonu anasayfaya gidin
+        driver.get("https://www.testotomasyonu.com");
 
-      // 2)dress yazarak arama yapin
-      WebElement aramaKutusu = driver.findElement(By.id("global-search"));
-      aramaKutusu.sendKeys("dress" + Keys.ENTER);
+        // 2)dress yazarak arama yapin
+        WebElement aramaKutusu = driver.findElement(By.id("global-search"));
+        aramaKutusu.sendKeys("dress" + Keys.ENTER);
 
-      //3) arama sonucunda urun bulunabildigini test edin
-      WebElement aramaSonucElementi= driver.findElement(By.className("product-count-text"));
-      String expectedSonucYazisi="10 Products Found";
-      String actualSonucYazisi=aramaSonucElementi.getText();
-      Assert.assertEquals(expectedSonucYazisi,actualSonucYazisi);
+        //3) arama sonucunda urun bulunabildigini test edin
+        WebElement aramaSonucElementi = driver.findElement(By.className("product-count-text"));
+        String expectedSonucYazisi = "10 Products Found";
+        String actualSonucYazisi = aramaSonucElementi.getText();
+        Assert.assertEquals(expectedSonucYazisi, actualSonucYazisi);
 
       /*
          WebElement aramaSonucElementi = driver.findElement(By.className("product-count-text"));
@@ -34,32 +34,12 @@ public class C04_ScreenshotIleAramaTesti extends TestBase {
         Assert.assertNotEquals(unExpectedAramaSonucu,actualAramaSonucu);
        */
 
-      ReusableMethods.bekle(2);
-      //4)tum sayfanin screenshot'ini kaydedin
-      ReusableMethods.tumSayfaTakeScreenshot("aramaTesti",driver);
+        ReusableMethods.bekle(2);
+        //4)tum sayfanin screenshot'ini kaydedin
+        ReusableMethods.tumSayfaTakeScreenshot("aramaTesti", driver);
 
 
-
-
-
-
-
-
-
-
-
-
-
-   }
-
-
-
-
-
-
-
-
-
+    }
 
 
 }

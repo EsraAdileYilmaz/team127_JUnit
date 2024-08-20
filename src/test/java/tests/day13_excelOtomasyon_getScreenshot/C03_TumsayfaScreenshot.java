@@ -19,49 +19,34 @@ public class C03_TumsayfaScreenshot extends TestBase {
         driver.get("https://www.testotomasyonu.com");
 
         //2) Nutella icin arama yapin
-        WebElement searchBox= driver.findElement(By.id("global-search"));
+        WebElement searchBox = driver.findElement(By.id("global-search"));
         searchBox.sendKeys("Nutella" + Keys.ENTER);
 
         //3) Arama sonucunda urun bulunamadigini test edin
-        WebElement sonucYaziElementi= driver.findElement(By.className("product-count-text"));
-        String expectedAramaSonucu="0 Products Found";
-        String actualAramaSonucu=sonucYaziElementi.getText();
-        Assert.assertEquals(expectedAramaSonucu,actualAramaSonucu);
+        WebElement sonucYaziElementi = driver.findElement(By.className("product-count-text"));
+        String expectedAramaSonucu = "0 Products Found";
+        String actualAramaSonucu = sonucYaziElementi.getText();
+        Assert.assertEquals(expectedAramaSonucu, actualAramaSonucu);
 
 
         ReusableMethods.bekle(2);
         // 4) tum sayfanin fotografini cekip kaydedin
 
         //1.adim takesScreenShot(tss) objesi olusturun
-        TakesScreenshot tss= (TakesScreenshot) driver;
+        TakesScreenshot tss = (TakesScreenshot) driver;
 
         // 2.adim fotografi kaydedecegimiz dosya yolu ile bir File olusturalim
-        File tumSayfaScreenshot=new File("target/screenshots/tumSayfaScreenshot.jpg");
+        File tumSayfaScreenshot = new File("target/screenshots/tumSayfaScreenshot.jpg");
         //bu bizim kalici kaydedecegimiz dosyamiz.fotografimizi enson tumSayfaScreenshot icine kaydedicez
 
         // 3.adim tss objesini kullanarak fotografi cekip, gecici bir dosyaya kaydedelim.
-        File geciciDosya=tss.getScreenshotAs(OutputType.FILE);
+        File geciciDosya = tss.getScreenshotAs(OutputType.FILE);
         //bu dosya gecici kaydedilen dosyadir.ve burda screenshot(fotograf cekimi) yapmis olduk
 
         // 4.adim : gecici dosyayi, asil dosyaya kopyalayalim
-        FileUtils.copyFile(geciciDosya,tumSayfaScreenshot);
+        FileUtils.copyFile(geciciDosya, tumSayfaScreenshot);
 
         ReusableMethods.bekle(5);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

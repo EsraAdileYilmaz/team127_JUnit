@@ -32,7 +32,7 @@ public class C05_WebelementScreenshot extends TestBase {
 
         String unExpectedAramaSonucu = "0 Products Found";
         String actualAramaSonucu = aramaSonucElementi.getText();
-        Assert.assertNotEquals(unExpectedAramaSonucu,actualAramaSonucu);
+        Assert.assertNotEquals(unExpectedAramaSonucu, actualAramaSonucu);
 
         ReusableMethods.bekle(3);
 
@@ -42,13 +42,13 @@ public class C05_WebelementScreenshot extends TestBase {
         aramaSonucElementi = driver.findElement(By.className("product-count-text"));//yukarida locate edildi
 
         //2.adim screenshot'i kaydedecegimiz file'i olusturalim
-        File istenenWebelementScreenshot=new File("target/screenshots/istenenWebelementScreenshot.jpg");
+        File istenenWebelementScreenshot = new File("target/screenshots/istenenWebelementScreenshot.jpg");
 
         // 3.adim webelement uzerinden screenshot'i alip gecici bir dosyaya kaydedin
-        File geciciDosya= aramaSonucElementi.getScreenshotAs(OutputType.FILE);
+        File geciciDosya = aramaSonucElementi.getScreenshotAs(OutputType.FILE);
 
         // 4.adim gecici dosyayi asil dosyaya kopyalayalim
-        FileUtils.copyFile(geciciDosya,istenenWebelementScreenshot);
+        FileUtils.copyFile(geciciDosya, istenenWebelementScreenshot);
 
     }
 }

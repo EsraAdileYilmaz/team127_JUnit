@@ -13,7 +13,7 @@ import tests.utilities.TestBase;
 public class C07_ScroolIntoView extends TestBase {
 
     @Test
-    public void newProductTesti(){
+    public void newProductTesti() {
 
         // 1) test otomasyonu anasayfaya gidin
         driver.get("https://www.testotomasyonu.com");
@@ -22,9 +22,9 @@ public class C07_ScroolIntoView extends TestBase {
 
         // 2) Best Sport Shoes bolumu gorununceye kadar asagi inin.
        /*
-         Bu yontem ile asagiya inebildik
+        Bu yontem ile asagiya inebildik
         AMMA bilgisayardan bilgisayara cozunurluk degisecegi icin
-        bu method her bilgisayar icin ozel ayarlanmali
+        bu method her bilgisayar icin ozel ayarlanarak yapilmalidir.
 
         Actions actions=new Actions(driver);
         actions.sendKeys(Keys.PAGE_DOWN)
@@ -36,10 +36,9 @@ public class C07_ScroolIntoView extends TestBase {
                 .sendKeys(Keys.PAGE_DOWN).perform();
        */
 
-
-        WebElement bestSportShoesElementi= driver.findElement(By.xpath("(//p[@class='blog-heading'])[2]"));
-        JavascriptExecutor javascriptExecutor= (JavascriptExecutor) driver;//javascript objesi olusturduk
-        javascriptExecutor.executeScript("arguments[0].scrollIntoView();",bestSportShoesElementi);
+        WebElement bestSportShoesElementi = driver.findElement(By.xpath("(//p[@class='blog-heading'])[2]"));
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;//javascript objesi olusturduk
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView();", bestSportShoesElementi);
         //olusturdugumuz javascript objesi ile ("bestSportShoesElementi" gorununceye kadar asagi in) demis oluyoruz.
 
         //3) linki tiklayin
@@ -49,12 +48,11 @@ public class C07_ScroolIntoView extends TestBase {
         //javascript objesi ile elemente click() yaptik ama NoSuchElementException firlatti.
 
 
-
         // 4) h1 taginda "Best Sport Shoes For Multi Gender" yazdigini test edin
-        WebElement urunYaziElementi= driver.findElement(By.tagName("h1"));
-        String expectedYazi="Best Sport Shoes For Multi Gender";
-        String actualYazi= urunYaziElementi.getText();
-        Assert.assertEquals(expectedYazi,actualYazi);
+        WebElement urunYaziElementi = driver.findElement(By.tagName("h1"));
+        String expectedYazi = "Best Sport Shoes For Multi Gender";
+        String actualYazi = urunYaziElementi.getText();
+        Assert.assertEquals(expectedYazi, actualYazi);
 
 
         javascriptExecutor.executeScript("alert('yasasinnnn');");

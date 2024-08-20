@@ -94,8 +94,8 @@ public class ReusableMethods extends TestBase{
         LocalDateTime localDateTime = LocalDateTime.now();
         DateTimeFormatter istenenFormat = DateTimeFormatter.ofPattern("yyMMddHHmmss");
         String dinamikDosyaYolu = "target/screenshots/tumSayfaScreenshot" +
-                localDateTime.format(istenenFormat)+
-                ".jpg";
+                                   localDateTime.format(istenenFormat)+
+                                   ".jpg";
 
         File tumSayfaScreenshot = new File(dinamikDosyaYolu);
 
@@ -112,7 +112,7 @@ public class ReusableMethods extends TestBase{
         }
 
         ReusableMethods.bekle(5);
-    }
+    }//tum sayfanin screenshot'ini alip target'in altina atar
 
 
 
@@ -132,10 +132,10 @@ public class ReusableMethods extends TestBase{
         LocalDateTime localDateTime = LocalDateTime.now();
         DateTimeFormatter istenenFormat = DateTimeFormatter.ofPattern("yyMMddHHmmss");
         String dinamikDosyaYolu = "target/screenshots/"+
-                testAdi
-                +
-                localDateTime.format(istenenFormat)+
-                ".jpg";
+                                    testAdi
+                                    +
+                                    localDateTime.format(istenenFormat)+
+                                    ".jpg";
 
 
         //File tumSayfaScreenshot=new File("target/screenshots/tumSayfaScreenshot.jpg");//bu dosya yolu dinamik deildir
@@ -156,7 +156,7 @@ public class ReusableMethods extends TestBase{
 
         ReusableMethods.bekle(5);
 
-    }
+    }//tum sayfanin screenshot'ini alip target'in altina atar
 
 
 
@@ -168,8 +168,8 @@ public class ReusableMethods extends TestBase{
         LocalDateTime localDateTime = LocalDateTime.now();
         DateTimeFormatter istenenFormat = DateTimeFormatter.ofPattern("yyMMddHHmmss");
         String dinamikDosyaYolu = "target/screenshots/istenenWebelementScreenshot" +
-                localDateTime.format(istenenFormat)+
-                ".jpg";
+                                   localDateTime.format(istenenFormat)+
+                                   ".jpg";
 
 
         File istenenWebelementScreenshot = new File(dinamikDosyaYolu);
@@ -186,7 +186,7 @@ public class ReusableMethods extends TestBase{
             System.out.println("Screenshot kopyalanamadi");
             throw new RuntimeException(e);
         }
-    }
+    }//Locate'i alinan webelementin screenshot'ini alip target'in altina atar
 
     public String getCellData(int satirNo, int sutunNo) {
         // ornegin==> //tbody/tr[4]/td[3]    tr[]=satir   td[]=sutun  asagida bunu dinamik olarak yazacagiz.

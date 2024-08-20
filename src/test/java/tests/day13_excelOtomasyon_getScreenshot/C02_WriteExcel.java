@@ -9,16 +9,16 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class C02_WriteExcel {
+public class  C02_WriteExcel {
 
     @Test
     public void writeExcelTesti() throws IOException {
 
         //2) Yeni bir test method olusturalim writeExcelTest()
-        String dosyaYolu="src/test/java/tests/day12_webTables_excelOtomasyon/ulkeler.xlsx";//bu yolda bir dosya var demek
-        FileInputStream fileInputStream=new FileInputStream(dosyaYolu);//FileInputStream objesi=yukarda yolu verilen dosyayi okuyor.
-        Workbook workbook= WorkbookFactory.create(fileInputStream);//okunan dosya icindeki bilgileri kaydetmek ve uzerinde islem yapmak icin workbook(kopya excell) objesi olusturuyoruz
-        Sheet sayfa1=workbook.getSheet("Sayfa1");//bunu yaparak direk Sayfa1'e geldik
+        String dosyaYolu = "src/test/java/tests/day12_webTables_excelOtomasyon/ulkeler.xlsx";//bu yolda bir dosya var demek
+        FileInputStream fileInputStream = new FileInputStream(dosyaYolu);//FileInputStream objesi=yukarda yolu verilen dosyayi okuyor.
+        Workbook workbook = WorkbookFactory.create(fileInputStream);//okunan dosya icindeki bilgileri kaydetmek ve uzerinde islem yapmak icin workbook(kopya excell) objesi olusturuyoruz
+        Sheet sayfa1 = workbook.getSheet("Sayfa1");//bunu yaparak direk Sayfa1'e geldik
 
 
         //3) Adimlari takip ederek Sayfa1’deki 1.satira(yani 0.indexe) kadar gidelim
@@ -40,7 +40,7 @@ public class C02_WriteExcel {
         //9) Dosyayi kaydedelim
         //Biz bu degisiklikleri workbook uzerinde yaptik.oyuzden bu degisiklikleri gercek excel'e kaydetmemiz lazim
         //AMMA gercek excel'e kaydederken bilgisayarimizdaki excel aciksa onu kapatmamiz gerekir.(Quitter yapmaliyiz)
-        FileOutputStream fileOutputStream=new FileOutputStream(dosyaYolu);//dosya disina dogru akis sagliyoruz.
+        FileOutputStream fileOutputStream = new FileOutputStream(dosyaYolu);//dosya disina dogru akis sagliyoruz.
         //dosyaYolunu verdigim, dosyaya ekledigim bilgileri disa akis sagla demis oluyoruz
         workbook.write(fileOutputStream);//disardan gelen akisi workbook'a ekle
 
@@ -50,18 +50,6 @@ public class C02_WriteExcel {
         fileOutputStream.close();
         fileInputStream.close();
         workbook.close();
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
