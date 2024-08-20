@@ -20,7 +20,10 @@ public class  C02_WriteExcel {
         Workbook workbook = WorkbookFactory.create(fileInputStream);//okunan dosya icindeki bilgileri kaydetmek ve uzerinde islem yapmak icin workbook(kopya excell) objesi olusturuyoruz
         Sheet sayfa1 = workbook.getSheet("Sayfa1");//bunu yaparak direk excel icindeki Sayfa1'e geldik
 
-
+        /*
+        Kopya excell yani workbook sadece kullanilan satir ve sutunlari icerir.
+        Bos olanlari icermez.
+         */
         //3) Adimlari takip ederek Sayfa1’deki 1.satira(yani 0.indexe) kadar gidelim
         //4) 5.hucreye yeni bir cell olusturalim
         sayfa1.getRow(0).createCell(4);//1.satira 5.hucre ekledik
